@@ -1157,3 +1157,176 @@ summary {
       0 0 0 56px rgba(255, 255, 255, 0.03);
   }
 }
+
+/* ===== Logo Styling ===== */
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* ===== Dynamic Eyebrow Animation ===== */
+.eyebrow-dynamic {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.eyebrow-city,
+.eyebrow-country {
+  display: inline-block;
+  height: 1.3em;
+  overflow: hidden;
+  position: relative;
+}
+
+.eyebrow-city span,
+.eyebrow-country span {
+  display: block;
+  animation: eyebrow-slide 6s ease-in-out infinite;
+}
+
+.eyebrow-city span:nth-child(2) { animation-delay: -4s; }
+.eyebrow-city span:nth-child(3) { animation-delay: -2s; }
+.eyebrow-country span:nth-child(2) { animation-delay: -3s; }
+
+@keyframes eyebrow-slide {
+  0%, 25% { transform: translateY(0); opacity: 1; }
+  30%, 95% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Scroll-triggered Animations ===== */
+.animate-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-in:nth-child(1) { animation-delay: 0.1s; }
+.animate-in:nth-child(2) { animation-delay: 0.2s; }
+.animate-in:nth-child(3) { animation-delay: 0.3s; }
+.animate-in:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section reveal on scroll */
+.section-heading,
+.testimonial-card,
+.blog-card,
+.plan-card,
+.proof-card,
+.security-list article,
+.integration-cloud span,
+.metrics-panel,
+.faq-list details {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-heading.visible,
+.testimonial-card.visible,
+.blog-card.visible,
+.plan-card.visible,
+.proof-card.visible,
+.security-list article.visible,
+.integration-cloud span.visible,
+.metrics-panel.visible,
+.faq-list details.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.testimonial-card:nth-child(1).visible { transition-delay: 0.05s; }
+.testimonial-card:nth-child(2).visible { transition-delay: 0.1s; }
+.testimonial-card:nth-child(3).visible { transition-delay: 0.15s; }
+.testimonial-card:nth-child(4).visible { transition-delay: 0.2s; }
+.testimonial-card:nth-child(5).visible { transition-delay: 0.25s; }
+.testimonial-card:nth-child(6).visible { transition-delay: 0.3s; }
+
+.blog-card:nth-child(1).visible { transition-delay: 0.05s; }
+.blog-card:nth-child(2).visible { transition-delay: 0.1s; }
+.blog-card:nth-child(3).visible { transition-delay: 0.15s; }
+.blog-card:nth-child(4).visible { transition-delay: 0.2s; }
+
+.plan-card:nth-child(1).visible { transition-delay: 0.05s; }
+.plan-card:nth-child(2).visible { transition-delay: 0.1s; }
+.plan-card:nth-child(3).visible { transition-delay: 0.15s; }
+.plan-card:nth-child(4).visible { transition-delay: 0.2s; }
+.plan-card:nth-child(5).visible { transition-delay: 0.25s; }
+
+.proof-card:nth-child(1).visible { transition-delay: 0.1s; }
+.proof-card:nth-child(2).visible { transition-delay: 0.2s; }
+.proof-card:nth-child(3).visible { transition-delay: 0.3s; }
+
+.integration-cloud span:nth-child(1).visible { transition-delay: 0.02s; }
+.integration-cloud span:nth-child(2).visible { transition-delay: 0.04s; }
+.integration-cloud span:nth-child(3).visible { transition-delay: 0.06s; }
+.integration-cloud span:nth-child(4).visible { transition-delay: 0.08s; }
+.integration-cloud span:nth-child(5).visible { transition-delay: 0.1s; }
+.integration-cloud span:nth-child(6).visible { transition-delay: 0.12s; }
+.integration-cloud span:nth-child(7).visible { transition-delay: 0.14s; }
+.integration-cloud span:nth-child(8).visible { transition-delay: 0.16s; }
+.integration-cloud span:nth-child(9).visible { transition-delay: 0.18s; }
+.integration-cloud span:nth-child(10).visible { transition-delay: 0.2s; }
+
+.security-list article:nth-child(1).visible { transition-delay: 0.1s; }
+.security-list article:nth-child(2).visible { transition-delay: 0.2s; }
+.security-list article:nth-child(3).visible { transition-delay: 0.3s; }
+
+.faq-list details:nth-child(1).visible { transition-delay: 0.05s; }
+.faq-list details:nth-child(2).visible { transition-delay: 0.1s; }
+.faq-list details:nth-child(3).visible { transition-delay: 0.15s; }
+.faq-list details:nth-child(4).visible { transition-delay: 0.2s; }
+
+/* Hero visual floating animation */
+.hero-visual {
+  animation: floatGently 6s ease-in-out infinite;
+}
+
+@keyframes floatGently {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Pulse animation for security core */
+.security-core {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Button hover animations */
+.button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 232, 232, 0.2);
+}
+
+/* Card hover lift effect */
+.testimonial-card,
+.blog-card,
+.plan-card {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.testimonial-card:hover,
+.blog-card:hover,
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}

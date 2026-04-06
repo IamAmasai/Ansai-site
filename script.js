@@ -63,3 +63,40 @@ faqItems.forEach((item) => {
     });
   });
 });
+
+// ===== Dynamic Eyebrow: Auto-updating Date =====
+const eyebrowDate = document.querySelector(".eyebrow-date");
+if (eyebrowDate) {
+  const updateDate = () => {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    eyebrowDate.textContent = now.toLocaleDateString('en-US', options);
+  };
+  updateDate();
+  // Update date at midnight
+  const msUntilMidnight = new Date().setHours(24, 0, 0, 0) - Date.now();
+  setTimeout(() => {
+    updateDate();
+    setInterval(updateDate, 86400000); // Update daily
+  }, msUntilMidnight);
+}
+
+// ===== Scroll-triggered Animations =====
+const revealElements = document.querySelectorAll(
+  '.section-heading, .testimonial-card, .blog-card, .plan-card, ' +
+  '.proof-card, .security-list article, .integration-cloud span, ' +
+  '.metrics-panel, .faq-list details'
+);
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
