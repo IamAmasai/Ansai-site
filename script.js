@@ -81,6 +81,30 @@ if (eyebrowDate) {
   }, msUntilMidnight);
 }
 
+// ===== Dynamic Eyebrow: Cycling Cities & Countries =====
+const eyebrowCity = document.querySelector(".eyebrow-city");
+const eyebrowCountry = document.querySelector(".eyebrow-country");
+
+function cycleEyebrow(container, intervalMs) {
+  if (!container) return;
+  const items = container.querySelectorAll("span");
+  if (items.length === 0) return;
+  
+  let currentIndex = 0;
+  // Show first item
+  items[currentIndex].classList.add("active");
+  
+  setInterval(() => {
+    items[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % items.length;
+    items[currentIndex].classList.add("active");
+  }, intervalMs);
+}
+
+// Cycle cities every 3 seconds, countries every 4.5 seconds
+cycleEyebrow(eyebrowCity, 3000);
+cycleEyebrow(eyebrowCountry, 4500);
+
 // ===== Scroll-triggered Animations =====
 const revealElements = document.querySelectorAll(
   '.section-heading, .testimonial-card, .blog-card, .plan-card, ' +
