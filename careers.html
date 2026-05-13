@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Partner — Ansai Technologies</title>
+  <meta name="description" content="Join EduManage as a commission-based field sales partner. Bring school management software to secondary schools across Kenya." />
+  <meta property="og:title" content="Sales Partner Opportunity — Ansai Technologies" />
+  <meta property="og:description" content="Well-connected in Kenyan secondary schools? Earn commission introducing EduManage to your network." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #111C27;
+      --cyan:   #2DE8E8;
+      --blue:   #1C5CF5;
+      --white:  #ffffff;
+      --off:    #F6F5F1;
+      --muted:  #5C6470;
+      --border: rgba(17,28,39,0.1);
+      --text:   #111C27;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 62px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.05rem;
+      color: var(--navy); text-decoration: none;
+      letter-spacing: -0.02em;
+      display: flex; align-items: center;
+    }
+    .nav-dot {
+      display: inline-block; width: 6px; height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      margin-left: 4px; margin-bottom: 7px;
+    }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .nav-pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 100px; color: var(--muted);
+    }
+    .nav-cta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500;
+      padding: 9px 22px;
+      background: var(--navy); color: var(--white);
+      border-radius: 8px; text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.82; }
+
+    /* HERO */
+    .hero {
+      padding: 6rem 2rem 5rem;
+      max-width: 1080px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 5rem; align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 100px; color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+    .tag-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #22c55e;
+      animation: blink 2.2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 4.8vw, 3.7rem);
+      font-weight: 800; line-height: 1.05;
+      letter-spacing: -0.03em; color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .h1-grad {
+      background: linear-gradient(100deg, var(--cyan) 0%, var(--blue) 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1rem; color: var(--muted);
+      max-width: 480px; line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 500;
+      padding: 13px 30px;
+      background: var(--navy); color: var(--white);
+      border-radius: 9px; text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.84; transform: translateY(-1px); }
+    .btn-primary svg { width: 15px; height: 15px; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 400;
+      padding: 13px 22px;
+      background: transparent; color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 9px; text-decoration: none;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
+
+    /* HERO CARD */
+    .hero-card {
+      background: var(--navy);
+      border-radius: 20px; padding: 2rem;
+    }
+    .hc-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); margin-bottom: 1.5rem;
+    }
+    .hc-item { margin-bottom: 1.5rem; }
+    .hc-item:last-of-type { margin-bottom: 0; }
+    .hc-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 800; line-height: 1.1;
+      color: var(--white); margin-bottom: 5px;
+    }
+    .hc-title span { color: var(--cyan); }
+    .hc-desc { font-size: 12px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+    .hc-hr { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 1.5rem 0; }
+    .hc-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 6px 14px;
+      background: rgba(45,232,232,0.1);
+      color: var(--cyan);
+      border: 1px solid rgba(45,232,232,0.22);
+      border-radius: 100px;
+      margin-top: 1.5rem;
+    }
+    .hc-badge svg { width: 11px; height: 11px; }
+
+    /* MOBILE STATS */
+    .mobile-stats {
+      display: none;
+      background: var(--navy);
+    }
+    .ms-inner {
+      display: flex; max-width: 1080px; margin: 0 auto;
+      padding: 1.75rem 1.5rem;
+    }
+    .ms-item {
+      flex: 1; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      padding: 0 1rem;
+    }
+    .ms-item:last-child { border-right: none; }
+    .ms-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 800;
+      color: var(--white); line-height: 1.2; margin-bottom: 3px;
+    }
+    .ms-title span { color: var(--cyan); }
+    .ms-desc { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.9rem;
+    }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      color: var(--navy); margin-bottom: 0.9rem; line-height: 1.15;
+    }
+    .sec-sub {
+      font-size: 1rem; color: var(--muted);
+      max-width: 500px; margin-bottom: 3rem; line-height: 1.75;
+    }
+
+    /* WHAT GRID */
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+    }
+    .what-cell {
+      background: var(--white);
+      padding: 1.75rem 1.5rem;
+      transition: background 0.15s;
+    }
+    .what-cell:hover { background: var(--off); }
+    .wc-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--blue);
+      margin-bottom: 1rem; font-weight: 500;
+    }
+    .what-cell h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px; font-weight: 700;
+      color: var(--navy); margin-bottom: 7px;
+    }
+    .what-cell p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+    /* WHO WE WANT */
+    .ideal-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 2.5rem;
+    }
+    .ideal-wrap h3 {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px 3rem;
+    }
+    .check-item {
+      display: flex; gap: 11px; align-items: flex-start;
+      font-size: 14px; color: var(--muted); line-height: 1.55;
+    }
+    .check-item svg {
+      width: 15px; height: 15px; color: var(--blue);
+      flex-shrink: 0; margin-top: 3px;
+    }
+
+    /* COMMISSION */
+    .comm-wrap {
+      border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+    }
+    .comm-head {
+      background: var(--off);
+      padding: 2rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comm-head h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 5px;
+    }
+    .comm-head p { font-size: 14px; color: var(--muted); }
+    .comm-body { padding: 0 2.5rem; }
+    .c-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 1.25rem; align-items: flex-start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .c-row:last-child { border-bottom: none; }
+    .c-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--blue); font-weight: 500;
+      padding-top: 2px;
+    }
+    .c-body h4 {
+      font-size: 14px; font-weight: 500;
+      color: var(--navy); margin-bottom: 4px;
+    }
+    .c-body p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .comm-note {
+      padding: 1.25rem 2.5rem;
+      border-top: 1px solid var(--border);
+      background: var(--off);
+      font-size: 12px; color: var(--muted); line-height: 1.7;
+    }
+    .comm-note strong { color: var(--navy); font-weight: 500; }
+
+    /* PROCESS */
+    .proc-list { display: flex; flex-direction: column; }
+    .proc-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 1.5rem; padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .proc-item:last-child { border-bottom: none; }
+    .proc-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px; font-weight: 500;
+      color: var(--blue); padding-top: 3px;
+    }
+    .proc-body h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px; font-weight: 700;
+      color: var(--navy); margin-bottom: 6px;
+    }
+    .proc-body p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* FINAL CTA */
+    .cta-wrap { padding: 4rem 2rem 5rem; max-width: 1080px; margin: 0 auto; }
+    .cta-inner {
+      background: var(--navy);
+      border-radius: 22px; padding: 5rem 3rem;
+      text-align: center;
+    }
+    .cta-inner .eyebrow { color: rgba(255,255,255,0.35); margin-bottom: 0.9rem; }
+    .cta-inner h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-inner p {
+      color: rgba(255,255,255,0.45);
+      font-size: 15px; max-width: 400px;
+      margin: 0 auto 2.5rem; line-height: 1.7;
+    }
+    .btn-light {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px; font-weight: 500;
+      padding: 15px 38px;
+      background: var(--white); color: var(--navy);
+      border-radius: 10px; text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-light:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-light svg { width: 15px; height: 15px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1080px; margin: 0 auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--navy); }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr; gap: 0;
+        padding: 4rem 1.5rem 0;
+      }
+      .hero-card { display: none; }
+      .mobile-stats { display: block; }
+      section { padding: 3.5rem 1.5rem; }
+      .comm-head, .comm-body, .comm-note { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .ideal-wrap { padding: 1.75rem 1.5rem; }
+      .cta-inner { padding: 3rem 1.5rem; }
+      .cta-wrap { padding: 3rem 1rem 3rem; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+      .nav-pill { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      Ansai Technologies<span class="nav-dot"></span>
+    </a>
+    <div class="nav-right">
+      <span class="nav-pill">Open · Commission-based</span>
+      <a href="#apply" class="nav-cta">Apply now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding-bottom:0; padding-top:0;">
+    <div class="hero">
+      <div>
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          Now accepting applications
+        </div>
+        <h1>Earn from Kenya's<br>schools.<br><span class="h1-grad">On your terms.</span></h1>
+        <p class="hero-sub">EduManage is school management software built specifically for Kenyan secondary schools. We're looking for well-connected field partners — people schools already trust — to bring it to their networks.</p>
+        <div class="hero-actions">
+          <a href="#apply" class="btn-primary">
+            Apply now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#what" class="btn-ghost">How it works</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hc-label">What's in it for you</div>
+        <div class="hc-item">
+          <div class="hc-title">Commission <span>on every signup</span></div>
+          <div class="hc-desc">You earn on the school setup fee and first-year subscription — agreed in writing before you start.</div>
+        </div>
+        <hr class="hc-hr">
+        <div class="hc-item">
+          <div class="hc-title">Volume <span>bonus structure</span></div>
+          <div class="hc-desc">Bring in multiple schools in a term and unlock additional earnings on top of your base commission.</div>
+        </div>
+        <hr class="hc-hr">
+        <div class="hc-item">
+          <div class="hc-title">First <span>mover advantage</span></div>
+          <div class="hc-desc">Early partners get priority as we expand counties and add products across the Ansai portfolio.</div>
+        </div>
+        <div class="hc-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Small first cohort — apply early
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE STATS -->
+  <div class="mobile-stats">
+    <div class="ms-inner">
+      <div class="ms-item">
+        <div class="ms-title">Commission <span>earned</span></div>
+        <div class="ms-desc">On every signup</div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-title">Volume <span>bonus</span></div>
+        <div class="ms-desc">Multiple schools</div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-title">First <span>cohort</span></div>
+        <div class="ms-desc">Limited spots</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU'LL DO -->
+  <section id="what">
+    <div class="container reveal">
+      <div class="eyebrow">The role</div>
+      <h2>What you'll actually be doing.</h2>
+      <p class="sec-sub">Four things. We keep the role focused — you open doors, we walk through them with you.</p>
+      <div class="what-grid">
+        <div class="what-cell">
+          <div class="wc-num">01</div>
+          <h4>Introduce EduManage</h4>
+          <p>Reach out to principals and administrators in your network. Share what EduManage does. A WhatsApp message or a call is enough to open the conversation.</p>
+        </div>
+        <div class="what-cell">
+          <div class="wc-num">02</div>
+          <h4>Book the demo</h4>
+          <p>Schedule a demo call or school visit. We handle the product presentation — you make the introduction and we take it from there.</p>
+        </div>
+        <div class="what-cell">
+          <div class="wc-num">03</div>
+          <h4>Earn on signups</h4>
+          <p>Every school that signs up through you earns you a commission — on the setup fee and the annual subscription. Terms are agreed before you start.</p>
+        </div>
+        <div class="what-cell">
+          <div class="wc-num">04</div>
+          <h4>Grow with us</h4>
+          <p>Early partners get priority as we expand into new counties. EduManage is the first Ansai product — there is more coming and we bring our partners along.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE WANT -->
+  <section style="background: var(--off);">
+    <div class="container reveal">
+      <div class="eyebrow">Who we're looking for</div>
+      <h2>If principals pick up<br>when you call — let's talk.</h2>
+      <p class="sec-sub">We're not looking for career salespeople. We want people who already live inside the school ecosystem.</p>
+      <div class="ideal-wrap">
+        <h3>Strong fit — you are:</h3>
+        <div class="check-grid">
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            A former or current teacher, school administrator, or education NGO professional
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Someone secondary school principals already know and trust by name
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Active in at least one county — ideally several, with real contacts in each
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Comfortable with a smartphone, WhatsApp, and basic field communication
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Genuinely interested in how schools work — not just in the commission
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Available part-time, full-time, or on a flexible gig basis — all work
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMISSION — descriptive, no figures -->
+  <section>
+    <div class="container reveal">
+      <div class="eyebrow">Earnings</div>
+      <h2>How you get paid.</h2>
+      <p class="sec-sub">Commission-based, structured fairly, and put in writing before you start. No vague promises.</p>
+      <div class="comm-wrap">
+        <div class="comm-head">
+          <h3>What the commission covers</h3>
+          <p>Three earning opportunities per school — discussed and agreed at the onboarding call.</p>
+        </div>
+        <div class="comm-body">
+          <div class="c-row">
+            <span class="c-num">01</span>
+            <div class="c-body">
+              <h4>Setup fee referral</h4>
+              <p>Every new school pays a one-time onboarding fee to get onto EduManage. You earn a cut of that fee for every school you bring in — paid once the school is confirmed and set up.</p>
+            </div>
+          </div>
+          <div class="c-row">
+            <span class="c-num">02</span>
+            <div class="c-body">
+              <h4>First-year subscription commission</h4>
+              <p>Schools pay an annual subscription based on their student population. You earn a percentage of that first-year subscription for each school that signs through you.</p>
+            </div>
+          </div>
+          <div class="c-row">
+            <span class="c-num">03</span>
+            <div class="c-body">
+              <h4>Volume bonus</h4>
+              <p>Partners who bring in multiple schools within a single school term unlock an additional bonus on top of the base commission. The more active your network, the more it compounds.</p>
+            </div>
+          </div>
+        </div>
+        <div class="comm-note">
+          <strong>Exact figures are agreed at the onboarding call — before you commit to anything.</strong> We put the terms in writing. Commissions are paid within 14 days of a school's subscription being confirmed and payment received.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background: var(--off);">
+    <div class="container reveal">
+      <div class="eyebrow">The process</div>
+      <h2>Four steps from application<br>to your first commission.</h2>
+      <div class="proc-list">
+        <div class="proc-item">
+          <span class="proc-num">01</span>
+          <div class="proc-body">
+            <h4>Fill in the application form</h4>
+            <p>Takes about 4 minutes. We ask about your school network, which counties you cover, and what draws you to this opportunity. There's one concrete question at the end: name a school you could book a demo at within two weeks. That question tells us more than anything else on the form.</p>
+          </div>
+        </div>
+        <div class="proc-item">
+          <span class="proc-num">02</span>
+          <div class="proc-body">
+            <h4>We review and shortlist</h4>
+            <p>We review applications within 3 business days and reach out to strong candidates by WhatsApp. We keep this first cohort small — quality over coverage. Everyone gets a response. No ghosting.</p>
+          </div>
+        </div>
+        <div class="proc-item">
+          <span class="proc-num">03</span>
+          <div class="proc-body">
+            <h4>Partner onboarding call</h4>
+            <p>A 30-minute conversation with the Ansai team. We walk you through EduManage, agree commission terms in writing, and make sure you're fully equipped to represent it. You leave the call ready — with materials, talking points, and a direct line to the product team.</p>
+          </div>
+        </div>
+        <div class="proc-item">
+          <span class="proc-num">04</span>
+          <div class="proc-body">
+            <h4>Go to market</h4>
+            <p>You start reaching out. We support your first few school conversations directly — demo materials, a school-facing one-pager, and live product support for early calls. You're not selling blind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div id="apply">
+    <div class="cta-wrap reveal">
+      <div class="cta-inner">
+        <div class="eyebrow">Ready?</div>
+        <h2>Apply now.<br>It takes 4 minutes.</h2>
+        <p>We onboard a small first cohort. The earlier you apply, the better your position in it.</p>
+        <!-- REPLACE href WITH YOUR TYPEFORM LINK ONCE LIVE -->
+        <a href="https://form.typeform.com/to/YOURFORMID" target="_blank" rel="noopener" class="btn-light">
+          Open application
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Ansai Technologies · Nairobi, Kenya</span>
+    <a href="/">ansaitechnologies.co.ke</a>
+  </footer>
+
+  <script>
+    const els = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
