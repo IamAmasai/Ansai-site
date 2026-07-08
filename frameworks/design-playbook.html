@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design playbook — GDP-001 · Ansai Technologies</title>
+    <meta name="description" content="The Ansai Design Playbook: the shared visual and interaction language for every Ansai product." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html" aria-label="Ansai Technologies home">
+          <img class="brand-logo" src="../ansai 1.svg" alt="Ansai" />
+          <span class="brand-text">
+            <strong>Ansai</strong>
+            <span>Technologies</span>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav">
+          <a href="../index.html#frameworks">← All frameworks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc-page container">
+      <div class="doc-header">
+        <span class="mono-label">GDP-001 · One system, product colour variations</span>
+        <h1 class="h1">Design <strong>playbook</strong></h1>
+        <p class="lead">
+          The shared visual and interaction language for every Ansai product. What is fixed here is
+          fixed everywhere — typography, spacing, motion, component philosophy, accessibility.
+          What varies per product is precisely defined: brand colour palettes that slot into the
+          shared token system without breaking it. One family. Distinct identities.
+        </p>
+        <div class="doc-provenance">
+          Rendered verbatim from the source document (v1.0). The site you are reading is built to
+          this playbook.
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <h2>01 — Design <strong>philosophy</strong></h2>
+        <blockquote>Beauty must not be decoration alone — it must emerge from usefulness.</blockquote>
+        <p>
+          Every design decision must answer to this belief. If an element exists for decoration
+          alone, it does not belong. If whitespace exists to fill a gap rather than to create
+          focus, it is wrong. If animation exists to impress rather than to confirm an action, it
+          is wrong.
+        </p>
+        <h3>The Ansai design creed — what we always do</h3>
+        <ul>
+          <li>Every component has a reason to exist.</li>
+          <li>Whitespace is used to create focus, not fill gaps.</li>
+          <li>Motion explains and confirms — it never decorates.</li>
+          <li>Hierarchy guides the eye without demanding attention.</li>
+          <li>The brand has a consistent voice across every surface.</li>
+        </ul>
+        <h3>What we never do</h3>
+        <ul>
+          <li>Animations that distract without purpose.</li>
+          <li>Design that makes the user feel uncertain about what to do next.</li>
+          <li>Information hidden behind hover states or interactions that are not discoverable.</li>
+          <li>Trend-chasing that ages the product in twelve months.</li>
+          <li>Complexity that exists to look sophisticated rather than to serve the user.</li>
+        </ul>
+
+        <h2>02 — Typography — <strong>fixed, never varies</strong></h2>
+        <dl>
+          <div class="doc-term">
+            <dt>Display and body</dt>
+            <dd>DM Sans — weights 300 (light), 400 (regular), 500 (medium), 600 (semibold). No other weights. No other display or body typeface in any Ansai product.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Data and code</dt>
+            <dd>DM Mono — weights 400 (regular), 500 (medium). Used for numbers, code, metadata, labels, monospaced display. Never for body copy.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Third typeface</dt>
+            <dd>Never. Two typefaces. Two purposes. Mixing a third typeface into any Ansai product is a design violation.</dd>
+          </div>
+        </dl>
+        <h3>Type scale — fixed</h3>
+        <dl>
+          <div class="doc-term">
+            <dt>Display</dt>
+            <dd class="mono-data">clamp(48px, 6.5vw, 82px) — weight 300 with bold span for key word</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Heading 1</dt>
+            <dd class="mono-data">clamp(30px, 3.5vw, 44px) — weight 300, key words bold</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Heading 2</dt>
+            <dd class="mono-data">28px — weight 500</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Heading 3</dt>
+            <dd class="mono-data">22px — weight 500</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Body</dt>
+            <dd class="mono-data">16px — weight 400 — line-height 1.7</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Small / label</dt>
+            <dd class="mono-data">13px — weight 400 or 500</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Mono / data</dt>
+            <dd class="mono-data">DM Mono 11–13px — weight 400 or 500</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Minimum</dt>
+            <dd class="mono-data">11px. Never smaller.</dd>
+          </div>
+        </dl>
+
+        <h2>03 — Spacing — <strong>fixed, never varies</strong></h2>
+        <p>
+          Spacing is based on a 4px base unit. All spacing values are multiples of 4. This creates
+          visual rhythm that is consistent across every Ansai product regardless of the brand
+          colour.
+        </p>
+        <dl>
+          <div class="doc-term">
+            <dt class="mono-data">4px · sp-1</dt>
+            <dd>Micro spacing. Icon-to-label gaps.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">8px · sp-2</dt>
+            <dd>Tight spacing. Internal component padding.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">12px · sp-3</dt>
+            <dd>Compact spacing. Related elements.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">16px · sp-4</dt>
+            <dd>Standard spacing. Default gap between items.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">24px · sp-6</dt>
+            <dd>Comfortable spacing. Card padding.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">32px · sp-8</dt>
+            <dd>Relaxed spacing. Section internal padding.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">48px · sp-12</dt>
+            <dd>Generous spacing. Between major sections.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">64px · sp-16</dt>
+            <dd>Expansive spacing. Hero sections.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">88px · sp-22</dt>
+            <dd>Maximum section padding.</dd>
+          </div>
+        </dl>
+
+        <h2>04 — The token <strong>system</strong></h2>
+        <p>
+          Tokens are the bridge between the shared design system and the product-specific brand
+          identity. Global tokens never change. Product tokens are the controlled variation point.
+        </p>
+        <h3>Global tokens — fixed across all Ansai products</h3>
+        <dl>
+          <div class="doc-term">
+            <dt class="mono-data">--color-text-primary</dt>
+            <dd>The main text colour. Adapts to light/dark mode automatically.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--color-text-secondary</dt>
+            <dd>Muted text — descriptions, subtitles, helper text.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--color-bg-primary / -secondary / -tertiary</dt>
+            <dd>Page background, card surface (+1 elevation), highlighted surface (+2 elevation).</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--color-border</dt>
+            <dd>Default border — rgba(255,255,255,0.08) in dark mode.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--color-success / -warning / -error</dt>
+            <dd>#34d399 / #fbbf24 / #f87171. Fixed. Never use brand colour for semantic states.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--font-sans / --font-mono</dt>
+            <dd>DM Sans for body and display. DM Mono for data and code.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--radius-sm / -md / -lg / -xl</dt>
+            <dd>8px subtle corners · 12px standard cards · 16px hero elements · 20px large containers.</dd>
+          </div>
+        </dl>
+        <h3>Product tokens — the variation point</h3>
+        <dl>
+          <div class="doc-term">
+            <dt class="mono-data">--brand-primary</dt>
+            <dd>The product's primary brand colour. Used for CTAs, active states, data highlights, the product gradient. Never used for semantic meaning.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--brand-secondary</dt>
+            <dd>The product's secondary brand colour. Used for the gradient endpoint and accent elements.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--brand-gradient</dt>
+            <dd>linear-gradient(145deg, var(--brand-primary) 0%, var(--brand-secondary) 100%).</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">--brand-glow</dt>
+            <dd>rgba version of brand-primary at 0.2 opacity. Used for button shadows and focused states.</dd>
+          </div>
+        </dl>
+        <h3>Current product palettes</h3>
+        <dl>
+          <div class="doc-term">
+            <dt>EduManage</dt>
+            <dd class="mono-data">#2de8e8 (cyan) → #1c5cf5 (blue)</dd>
+          </div>
+          <div class="doc-term">
+            <dt>AgriX (future)</dt>
+            <dd class="mono-data">#34d399 → #059669 · Reserved. Not yet implemented.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Health (future)</dt>
+            <dd class="mono-data">#f59e0b → #d97706 · Reserved. Not yet implemented.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Transport (future)</dt>
+            <dd class="mono-data">#6366f1 → #4f46e5 · Reserved. Not yet implemented.</dd>
+          </div>
+        </dl>
+
+        <h2>05 — Motion — <strong>fixed principles</strong></h2>
+        <dl>
+          <div class="doc-term">
+            <dt>Purpose</dt>
+            <dd>Motion explains and confirms. Every animation must answer: what does this teach the user about the system? Decorative motion is rejected.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Physics-based</dt>
+            <dd>Animations respect physical weight and momentum. Nothing appears or disappears instantly — it arrives and departs.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Reduced motion</dt>
+            <dd>Every animation is wrapped in @media (prefers-reduced-motion: no-preference). Users who have requested reduced motion see no animation.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Duration</dt>
+            <dd>Micro-interactions: 100–200ms. Transitions: 200–350ms. Page transitions: 350–500ms. Nothing longer than 500ms for UI feedback.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Easing</dt>
+            <dd class="mono-data">ease-out for entrances · ease-in for exits · cubic-bezier(0.34, 1.56, 0.64, 1) for spring effects</dd>
+          </div>
+          <div class="doc-term">
+            <dt>No gradients</dt>
+            <dd>Use solid flat fills. The brand gradient is the single exception — used only on the mark, CTAs, and data highlights.</dd>
+          </div>
+        </dl>
+
+        <h2>06 — Component <strong>philosophy</strong></h2>
+        <dl>
+          <div class="doc-term">
+            <dt>Flat surfaces</dt>
+            <dd>No gradients, mesh backgrounds, noise textures, or decorative effects on surfaces. Clean flat fills. The brand gradient is the only gradient permitted.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>No drop shadows</dt>
+            <dd>Elevation is expressed through background colour differences (bg-primary → bg-secondary → bg-tertiary), not shadows.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Border radius</dt>
+            <dd>Consistent use of the radius scale. Cards: 12px. Hero containers: 16px. Buttons: 8px. Pills: 100px. Never arbitrary values.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Dark mode</dt>
+            <dd>Every component must work in both dark and light mode. Use CSS variables — never hardcoded colour values.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Accessibility</dt>
+            <dd>WCAG AA minimum contrast for all text. Focus states visible on all interactive elements. No information conveyed by colour alone. Screen reader labels on all icons.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Sentence case</dt>
+            <dd>Always. Never Title Case in UI copy. Never all caps except for mono labels (document IDs, metadata). This applies everywhere.</dd>
+          </div>
+        </dl>
+
+        <h2>07 — Logo and mark — <strong>fixed, never varies</strong></h2>
+        <p>
+          The Ansai mark is two geometric strokes — a deconstructed upward arrow — in the brand
+          gradient. It is the only brand element that must never change. All product marks derive
+          from the Ansai mark as their parent identity.
+        </p>
+        <dl>
+          <div class="doc-term">
+            <dt>Gradient direction</dt>
+            <dd>Always top-right cyan to bottom-left blue. Never flipped, rotated, or reversed.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Clear space</dt>
+            <dd>Maintain 1× mark height on all sides. Nothing enters this space.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Minimum size</dt>
+            <dd>24px for digital use. Never smaller.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Never do</dt>
+            <dd>Flip, rotate, recolour, stretch, apply drop shadows, use in isolation from its gradient, or place on a background with insufficient contrast.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Product marks</dt>
+            <dd>Each product may have its own wordmark alongside the Ansai parent mark. The Ansai mark appears in the footer of every product.</dd>
+          </div>
+        </dl>
+
+        <h2>08 — Document <strong>control</strong></h2>
+        <dl>
+          <div class="doc-term">
+            <dt>Document ID</dt>
+            <dd class="mono-data">GDP-001</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Version</dt>
+            <dd>1.0</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Parent doc</dt>
+            <dd>GID-001 — Ansai Group Identity Document</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Source files</dt>
+            <dd class="mono-data">ansai-brand-system-v3.html</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Owner</dt>
+            <dd>Founder — until a design lead is hired</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Review cycle</dt>
+            <dd>When a new product is added to Ansai Group — to register its brand tokens</dd>
+          </div>
+        </dl>
+
+        <nav class="doc-footer-nav">
+          <a href="./engineering-principles.html">← Engineering principles</a>
+          <a href="../index.html#frameworks">All frameworks →</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Ansai Technologies</span>
+        <div>
+          <a href="../index.html">Home</a>
+          <a href="../index.html#frameworks">Frameworks</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

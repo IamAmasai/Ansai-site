@@ -1,8 +1,8 @@
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
-const counters = document.querySelectorAll(".metric-number");
 const faqItems = document.querySelectorAll(".faq-list details");
+const yearNode = document.getElementById("year");
 
 if (navToggle && header) {
   navToggle.addEventListener("click", () => {
@@ -19,37 +19,6 @@ if (navToggle && header) {
   });
 }
 
-const counterObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      const node = entry.target;
-      const target = Number(node.getAttribute("data-target"));
-      const duration = 1200;
-      const start = performance.now();
-
-      const tick = (time) => {
-        const progress = Math.min((time - start) / duration, 1);
-        node.textContent = Math.floor(progress * target).toString();
-        if (progress < 1) {
-          requestAnimationFrame(tick);
-          return;
-        }
-        node.textContent = target.toString();
-      };
-
-      requestAnimationFrame(tick);
-      observer.unobserve(node);
-    });
-  },
-  { threshold: 0.45 }
-);
-
-counters.forEach((counter) => counterObserver.observe(counter));
-
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
     if (!item.open) {
@@ -64,63 +33,26 @@ faqItems.forEach((item) => {
   });
 });
 
-// ===== Dynamic Eyebrow: Auto-updating Date =====
-const eyebrowDate = document.querySelector(".eyebrow-date");
-if (eyebrowDate) {
-  const updateDate = () => {
-    const now = new Date();
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    eyebrowDate.textContent = now.toLocaleDateString('en-US', options);
-  };
-  updateDate();
-  // Update date at midnight
-  const msUntilMidnight = new Date().setHours(24, 0, 0, 0) - Date.now();
-  setTimeout(() => {
-    updateDate();
-    setInterval(updateDate, 86400000); // Update daily
-  }, msUntilMidnight);
+if (yearNode) {
+  yearNode.textContent = new Date().getFullYear().toString();
 }
 
-// ===== Dynamic Eyebrow: Cycling Cities & Countries =====
-const eyebrowCity = document.querySelector(".eyebrow-city");
-const eyebrowCountry = document.querySelector(".eyebrow-country");
+const revealElements = document.querySelectorAll(".reveal");
 
-function cycleEyebrow(container, intervalMs) {
-  if (!container) return;
-  const items = container.querySelectorAll("span");
-  if (items.length === 0) return;
-  
-  let currentIndex = 0;
-  // Show first item
-  items[currentIndex].classList.add("active");
-  
-  setInterval(() => {
-    items[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % items.length;
-    items[currentIndex].classList.add("active");
-  }, intervalMs);
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
+} else {
+  revealElements.forEach((el) => el.classList.add("visible"));
 }
-
-// Cycle cities every 3 seconds, countries every 4.5 seconds
-cycleEyebrow(eyebrowCity, 3000);
-cycleEyebrow(eyebrowCountry, 4500);
-
-// ===== Scroll-triggered Animations =====
-const revealElements = document.querySelectorAll(
-  '.section-heading, .testimonial-card, .blog-card, .plan-card, ' +
-  '.proof-card, .security-list article, .integration-cloud span, ' +
-  '.metrics-panel, .faq-list details'
-);
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-);
-
-revealElements.forEach((el) => revealObserver.observe(el));

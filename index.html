@@ -3,674 +3,589 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ansai Technologies</title>
+    <title>Ansai Technologies — Digital infrastructure for African organizations</title>
     <meta
       name="description"
-      content="Ansai Technologies is the operational infrastructure platform for Africa, starting with education and expanding across the systems communities depend on."
+      content="Ansai Technologies is digital infrastructure for African organizations, starting with education and expanding across the systems communities depend on."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <div class="container nav-wrap">
-          <a class="brand" href="#top" aria-label="Ansai Technologies home">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Ansai Technologies home">
+          <img class="brand-logo" src="./ansai 1.svg" alt="Ansai" />
+          <span class="brand-text">
+            <strong>Ansai</strong>
+            <span>Technologies</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav">
+          <a href="#products">What we build</a>
+          <a href="#engineering">Engineering</a>
+          <a href="#principles">Principles</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#frameworks">Frameworks</a>
+        </nav>
+
+        <a class="header-cta button button-ghost" href="#contact">Start a conversation</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="hero-eyebrow mono-label">Nairobi, Kenya · est. 2026</span>
+            <h1 class="display">
+              <strong>Digital infrastructure</strong>
+              <span class="ghost">for African</span>
+              organizations.
+            </h1>
+            <p class="lead">
+              Ansai builds software for the organizations that run African life: schools, farms,
+              clinics, transport networks, utilities, and the communities they serve. We start
+              where trust is deepest, then expand through the systems daily life depends on.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#products">Explore what we build</a>
+              <a class="button button-ghost" href="#roadmap">Read the roadmap</a>
+            </div>
+            <div class="one-liner">
+              <span class="mono-label">In one sentence</span>
+              <p>
+                Ansai builds digital infrastructure for African organizations — schools,
+                businesses, and enterprises — making their data queryable and actionable through AI.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="glass-card">
+            <svg class="layer-diagram" viewBox="0 0 480 420" role="img" aria-labelledby="diagram-title">
+              <title id="diagram-title">The Ansai structural layer: ingestion, structure, retrieval, and action, wrapped in trust and tenancy, with AI as one tenant on top</title>
+
+              <!-- Tenants -->
+              <g class="tenant d6">
+                <rect x="40" y="16" width="158" height="34" rx="8" />
+              </g>
+              <text class="label-name d6" x="60" y="38" style="font-size: 12px">AI — current tenant</text>
+              <g class="tenant-ghost d6">
+                <rect x="212" y="16" width="160" height="34" rx="8" />
+              </g>
+              <text class="label-note d6" x="232" y="38">whatever succeeds it</text>
+              <line class="rail d6" x1="119" y1="50" x2="119" y2="76" stroke-dasharray="2 3" />
+              <line class="rail d6" x1="292" y1="50" x2="292" y2="76" stroke-dasharray="2 3" />
+
+              <!-- Action -->
+              <g class="slab d4">
+                <rect x="40" y="76" width="332" height="58" rx="8" />
+              </g>
+              <text class="label-index d4" x="60" y="102">04</text>
+              <text class="label-name d4" x="92" y="102">Action</text>
+              <text class="label-note d4" x="92" y="120">draft a report · flag an issue · update a record</text>
+
+              <!-- Retrieval -->
+              <g class="slab d3">
+                <rect x="40" y="146" width="332" height="58" rx="8" />
+              </g>
+              <text class="label-index d3" x="60" y="172">03</text>
+              <text class="label-name d3" x="92" y="172">Retrieval</text>
+              <text class="label-note d3" x="92" y="190">plain-language questions, grounded answers</text>
+
+              <!-- Structure -->
+              <g class="slab slab-highlight d2">
+                <rect x="40" y="216" width="332" height="58" rx="8" />
+              </g>
+              <text class="label-index d2" x="60" y="242">02</text>
+              <text class="label-name d2" x="92" y="242">Structure</text>
+              <text class="label-note d2" x="92" y="260">entities · relationships · schema</text>
+              <text class="label-accent d2" x="360" y="242" text-anchor="end">THE PART THAT COMPOUNDS</text>
+
+              <!-- Ingestion -->
+              <g class="slab d1">
+                <rect x="40" y="286" width="332" height="58" rx="8" />
+              </g>
+              <text class="label-index d1" x="60" y="312">01</text>
+              <text class="label-name d1" x="92" y="312">Ingestion</text>
+              <text class="label-note d1" x="92" y="330">spreadsheets · paper records · existing tools</text>
+
+              <!-- Trust rail -->
+              <path class="rail d5" d="M 388 76 h 12 v 268 h -12" />
+              <g transform="rotate(90 416 210)">
+                <text class="label-note d5" x="416" y="210" text-anchor="middle">trust · tenancy · audit</text>
+              </g>
+
+              <!-- Ground -->
+              <line class="rail d1" x1="40" y1="368" x2="372" y2="368" opacity="0.4" />
+              <text class="label-note d1" x="40" y="390">the structural layer underneath an organization</text>
+            </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="proof-row">
+            <div class="proof-item reveal">
+              <strong>2026</strong>
+              <span>founded in Nairobi, Kenya</span>
+            </div>
+            <div class="proof-item reveal">
+              <strong>8</strong>
+              <span>strategic sectors in the platform vision</span>
+            </div>
+            <div class="proof-item reveal">
+              <strong>30s</strong>
+              <span>critical sync target for high-value records</span>
+            </div>
+            <div class="proof-item reveal">
+              <strong>3</strong>
+              <span>backup layers minimum, on every product</span>
+            </div>
+          </div>
+
+          <div class="sector-band" aria-label="Sectors in the platform vision">
+            <span class="mono-label">Sectors</span>
+            <span>Education</span>
+            <span>Agriculture &amp; food</span>
+            <span>Health</span>
+            <span>Energy</span>
+            <span>Water &amp; environment</span>
+            <span>Transport &amp; logistics</span>
+            <span>Commerce</span>
+            <span>Smart cities</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="mono-label">What we build</span>
+            <h2 class="h1"><strong>Infrastructure,</strong> not occasional-use software</h2>
+            <p>
+              Ansai builds systems organizations depend on every day. The standard is simple: if it
+              went offline for a week, would the organization feel it in daily operations?
+            </p>
+          </div>
+
+          <div class="build-grid">
+            <article class="build-card reveal">
+              <span class="mono-label">Product</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 11h.01M15 11h.01" />
+                </svg>
+              </div>
+              <h3>EduManage</h3>
+              <p>
+                Complete school operations — admissions, fees, academics, communication — built for
+                the connectivity conditions schools actually face. Works offline, syncs when
+                connected, never loses data.
+              </p>
+              <a href="#roadmap">See the roadmap →</a>
+            </article>
+
+            <article class="build-card reveal">
+              <span class="mono-label">Method</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="7.5" r="3.5" />
+                  <path d="M5 21v-1a7 7 0 0 1 14 0v1M2.5 11.5 5 9M21.5 11.5 19 9" />
+                </svg>
+              </div>
+              <h3>The Mshauri model</h3>
+              <p>
+                Every feature starts with observation. Our engineers work alongside the people who
+                run an organization — the bursar, the teacher, the administrator — before writing
+                code. The result is software that fits how you actually work.
+              </p>
+              <a href="#principles">Read the principles →</a>
+            </article>
+
+            <article class="build-card reveal">
+              <span class="mono-label">Architecture</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m12 3 9 5-9 5-9-5 9-5ZM3 13l9 5 9-5M3 17.5l9 5 9-5" />
+                </svg>
+              </div>
+              <h3>Local-first stack</h3>
+              <p>
+                Data saves to the device instantly, syncs in the background when connectivity
+                allows, and is backed up automatically across three layers. No internet, no
+                problem.
+              </p>
+              <a href="#engineering">See the engineering →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="engineering">
+        <div class="container eng-grid">
+          <div class="section-heading compact reveal">
+            <span class="mono-label">Engineering</span>
+            <h2 class="h1">Built for the connectivity organizations <strong>actually face</strong></h2>
+            <p>
+              Every Ansai product meets the same data architecture standard — local-first,
+              sync-always, backup-automated, loss-never. Work continues without a signal, and
+              nothing is ever lost.
+            </p>
+            <div class="eng-meta">
+              <span class="eng-chip">IndexedDB</span>
+              <span class="eng-chip">Workbox</span>
+              <span class="eng-chip">CRDTs</span>
+              <span class="eng-chip">M-PESA Daraja</span>
+            </div>
+            <div class="eng-note">
+              <p>
+                Once an organization's records are structured, they become queryable and actionable
+                through AI — a plain-language question in, a grounded answer out. The structure
+                itself is tool-agnostic by design, built to outlast any single technology,
+                including today's AI.
+              </p>
+            </div>
+          </div>
+
+          <div class="eng-stack reveal">
+            <div class="eng-step">
+              <span class="step-index">01</span>
+              <div>
+                <h3>Local-first</h3>
+                <p>
+                  Data is written to the device first — immediately, without waiting for a network
+                  response. The sync happens in the background.
+                </p>
+              </div>
+            </div>
+            <div class="eng-step">
+              <span class="step-index">02</span>
+              <div>
+                <h3>Sync-always</h3>
+                <p>
+                  Continuous background sync whenever connectivity exists, with a 30-second target
+                  for critical records like fees and attendance.
+                </p>
+              </div>
+            </div>
+            <div class="eng-step">
+              <span class="step-index">03</span>
+              <div>
+                <h3>Backup-automated</h3>
+                <p>
+                  Three layers minimum: local write, server sync, off-site backup. No manual backup
+                  process anywhere.
+                </p>
+              </div>
+            </div>
+            <div class="eng-step">
+              <span class="step-index">04</span>
+              <div>
+                <h3>Loss-never</h3>
+                <p>
+                  Data entered on a device with no connection is never lost. It is stored locally
+                  and syncs the moment connectivity returns.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="principles">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="mono-label">Principles</span>
+            <h2 class="h1">The standards that shape <strong>how Ansai builds</strong></h2>
+            <p>
+              Technology should serve people, not the other way around. Every decision starts with
+              the humans who will use what we build. Each principle below is defined in a governing
+              document — the reference next to it.
+            </p>
+          </div>
+
+          <div class="principles-grid">
+            <article class="principle reveal">
+              <span class="mono-label">GCC-001 · 01</span>
+              <h3>Utu engineering</h3>
+              <p>
+                Every feature begins with a named person in a real organization. We understand
+                their day before we write a line of code.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <span class="mono-label">GCC-001 · 02</span>
+              <h3>Pamoja</h3>
+              <p>
+                Collaboration without politics. Credit is shared, disagreement is expected, and bad
+                news travels fast.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <span class="mono-label">GCC-001 · 03</span>
+              <h3>The Mshauri model</h3>
+              <p>
+                Every engineer holds field responsibility for the organizations they serve —
+                observing real workflows and returning with what they heard built into the product.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <span class="mono-label">GCC-001 · 04</span>
+              <h3>Constraint-led innovation</h3>
+              <p>
+                Limited resources are design constraints, not blockers. We make great things with
+                what is available.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <span class="mono-label">GCC-001 · 04</span>
+              <h3>Ship to learn</h3>
+              <p>
+                A prototype in a real organization for two hours beats a twenty-page specification.
+                Real feedback beats speculation.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <span class="mono-label">GID-001 · 05</span>
+              <h3>Data held in trust</h3>
+              <p>
+                Your data belongs to you. We hold it in trust, secure it fiercely, and never treat
+                it as ours.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="roadmap">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="mono-label">Roadmap</span>
+            <h2 class="h1">One structure, <strong>expanding sector by sector</strong></h2>
+            <p>
+              We prove the platform where trust is deepest, confirm it generalizes, and only then
+              expand. Education is live today; every following sector stands on the same
+              foundation.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-stage is-active reveal">
+              <span class="mono-label">Now</span>
+              <h3>Education</h3>
+              <p>
+                EduManage runs school operations end to end — admissions, fees, academics, and
+                parent communication.
+              </p>
+            </div>
+            <div class="timeline-stage reveal">
+              <span class="mono-label">Next</span>
+              <h3>Agriculture</h3>
+              <p>
+                Cooperatives and farming operations, entered through the rural communities schools
+                already anchor.
+              </p>
+            </div>
+            <div class="timeline-stage reveal">
+              <span class="mono-label">Horizon</span>
+              <h3>Health</h3>
+              <p>Clinics and community health systems, where reliability matters most.</p>
+            </div>
+            <div class="timeline-stage reveal">
+              <span class="mono-label">Scale</span>
+              <h3>Utilities</h3>
+              <p>Essential services — power, water, and shared community resources.</p>
+            </div>
+            <div class="timeline-stage reveal">
+              <span class="mono-label">Long term</span>
+              <h3>Mobility &amp; cities</h3>
+              <p>Urban systems and the movement of people and goods.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="frameworks">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="mono-label">Frameworks</span>
+            <h2 class="h1">The documents Ansai <strong>answers to</strong></h2>
+            <p>
+              Four governing documents define who we are, how we build, and what we refuse to do.
+              They are public because organizations should be able to see the standards their
+              infrastructure is held to.
+            </p>
+          </div>
+
+          <div class="framework-grid">
+            <a class="framework-card reveal" href="./frameworks/group-identity.html">
+              <span class="mono-label">GID-001</span>
+              <h3>Group identity</h3>
+              <p>What Ansai is — the mission, the vision, the structure, and what never changes.</p>
+              <span class="read-link">Read the document →</span>
+            </a>
+            <a class="framework-card reveal" href="./frameworks/culture-constitution.html">
+              <span class="mono-label">GCC-001</span>
+              <h3>Culture constitution</h3>
+              <p>The operating culture every person on every Ansai team inherits on day one.</p>
+              <span class="read-link">Read the document →</span>
+            </a>
+            <a class="framework-card reveal" href="./frameworks/engineering-principles.html">
+              <span class="mono-label">GEP-001</span>
+              <h3>Engineering principles</h3>
+              <p>The non-negotiable technical standards every Ansai product must meet.</p>
+              <span class="read-link">Read the document →</span>
+            </a>
+            <a class="framework-card reveal" href="./frameworks/design-playbook.html">
+              <span class="mono-label">GDP-001</span>
+              <h3>Design playbook</h3>
+              <p>The shared visual and interaction language — this site is built to it.</p>
+              <span class="read-link">Read the document →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container faq-grid">
+          <div class="section-heading compact reveal">
+            <span class="mono-label">FAQ</span>
+            <h2 class="h1">Common <strong>questions</strong></h2>
+            <p>Quick answers about what we do, how we do it, and why we do it differently.</p>
+            <a class="button button-ghost" href="#contact">Start a conversation</a>
+          </div>
+
+          <div class="faq-list reveal">
+            <details open>
+              <summary>What is Ansai Technologies?</summary>
+              <p>
+                Ansai is a digital infrastructure company building software for the organizations
+                that run African life. We create reliable, local-first systems that work every day
+                — starting with schools and expanding across education, agriculture, health, and
+                essential services.
+              </p>
+            </details>
+            <details>
+              <summary>Is Ansai an AI company?</summary>
+              <p>
+                No. Ansai builds the structural layer underneath an organization — the part that
+                captures how it actually operates. AI is the most useful tool currently standing on
+                that structure: it makes an organization's data queryable and actionable. The
+                structure itself is designed to outlast any single technology, including today's
+                AI.
+              </p>
+            </details>
+            <details>
+              <summary>Why does Ansai start with schools?</summary>
+              <p>
+                Schools are among the most demanding operational environments — students, staff,
+                finances, communication, and compliance all at once. If our infrastructure holds in
+                a school, it can serve almost any organization. Education is also where trust is
+                deepest: every community depends on its schools.
+              </p>
+            </details>
+            <details>
+              <summary>What makes EduManage different?</summary>
+              <p>
+                EduManage is built local-first: it works offline and syncs when connected. It
+                integrates M-PESA natively, runs on any device, and is designed for the
+                connectivity conditions schools actually face. Every feature prioritizes
+                reliability over novelty.
+              </p>
+            </details>
+            <details>
+              <summary>How does Ansai handle unreliable connectivity?</summary>
+              <p>
+                Data is stored on-device first using IndexedDB, syncs automatically with CRDTs for
+                conflict resolution, and is backed up across three layers. A 30-second sync target
+                moves critical records to the server as soon as connectivity returns.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="mono-label">Contact</span>
+            <h2 class="h1">We start where <strong>trust is deepest</strong></h2>
+            <p>
+              If you run a school, a business, or an enterprise and want your data working for you
+              — or you know the schools that should hear about EduManage — talk to us.
+            </p>
+          </div>
+          <div class="cta-actions reveal">
+            <a class="button button-primary" href="mailto:hello@ansaitechnologies.co.ke">Email us</a>
+            <a class="button button-ghost" href="./careers.html">Partner with us</a>
+          </div>
+          <span class="cta-meta"><a href="mailto:hello@ansaitechnologies.co.ke">hello@ansaitechnologies.co.ke</a> · Nairobi, Kenya</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#top">
             <img class="brand-logo" src="./ansai 1.svg" alt="Ansai" />
             <span class="brand-text">
               <strong>Ansai</strong>
               <span>Technologies</span>
             </span>
           </a>
-
-          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-            <span></span>
-            <span></span>
-          </button>
-
-          <nav class="site-nav" id="site-nav">
-            <a href="#about">About</a>
-            <a href="#products">Products</a>
-            <a href="#principles">Principles</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <a class="header-cta button button-light" href="#frameworks">View Infrastructure</a>
+          <p>
+            Built in Nairobi to give African organizations the clarity, dignity, and operational
+            confidence to run every day.
+          </p>
         </div>
-      </header>
 
-      <main id="top">
-        <section class="hero section" id="about">
-          <div class="container hero-grid">
-            <div class="hero-copy">
-              <span class="eyebrow eyebrow-dynamic">
-                <span class="eyebrow-city">
-                  <span>Nairobi</span>
-                  <span>Nakuru</span>
-                  <span>Bungoma</span>
-                </span>, 
-                <span class="eyebrow-country">
-                  <span>Kenya</span>
-                  <span>Africa</span>
-                </span>
-                <span class="eyebrow-separator">&middot;</span>
-                <span class="eyebrow-date"></span>
-              </span>
-              <h1 class="animate-in">The operational infrastructure platform for Africa.</h1>
-              <p class="lead animate-in">
-                Ansai builds software for the institutions that shape African life: schools, farms, clinics, 
-                transport networks, utilities, and the communities they serve.
-              </p>
-              <div class="hero-actions animate-in">
-                <a class="button button-primary" href="#products">Explore Products</a>
-                <a class="button button-ghost" href="#roadmap">See the vision</a>
-              </div>
-              <div class="hero-proof animate-in">
-                <div class="proof-card">
-                  <strong>2026</strong>
-                  <span>founded in Nairobi, Kenya</span>
-                </div>
-                <div class="proof-card">
-                  <strong>8</strong>
-                  <span>strategic sectors in the platform vision</span>
-                </div>
-                <div class="proof-card">
-                  <strong>30s</strong>
-                  <span>critical sync target for high-value records</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-visual" aria-hidden="true">
-              <div class="hero-orb hero-orb-a"></div>
-              <div class="hero-orb hero-orb-b"></div>
-              <div class="dashboard-card phone-card">
-                <div class="phone-notch"></div>
-                <div class="phone-topline">
-                  <span>EduManage</span>
-                  <strong>Operations</strong>
-                </div>
-                <div class="edumanage-features">
-                  <div class="edu-feature-item">
-                    <span class="edu-icon">📊</span>
-                    <span>Data architecture</span>
-                  </div>
-                  <div class="edu-feature-item">
-                    <span class="edu-icon">🔄</span>
-                    <span>Field model</span>
-                  </div>
-                  <div class="edu-feature-item">
-                    <span class="edu-icon">🛠️</span>
-                    <span>Current build focus</span>
-                  </div>
-                </div>
-                <div class="payment-tile">
-                  <div>
-                    <span>Platform status</span>
-                    <strong>Offline-first architecture active</strong>
-                  </div>
-                  <span class="status-pill">Building</span>
-                </div>
-              </div>
-              <div class="dashboard-card stat-card stat-card-left">
-                <span>Stack</span>
-                <strong>Local-first PWA</strong>
-              </div>
-              <div class="dashboard-card stat-card stat-card-right">
-                <span>Focus</span>
-                <strong>School operations</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="container logo-band">
-            <span>Education</span>
-            <span>Agriculture</span>
-            <span>Health</span>
-            <span>Energy</span>
-            <span>Water</span>
-            <span>Transport</span>
-            <span>Commerce</span>
-            <span>Smart Cities</span>
-            <span>Logistics</span>
-            <span>Utilities</span>
-          </div>
-        </section>
-
-        <section class="section features" id="products">
-          <div class="container">
-            <div class="section-heading">
-              <span class="eyebrow">Why Ansai</span>
-              <h2>Infrastructure, not occasional-use software</h2>
-              <p>
-                Ansai builds systems institutions depend on every day. The standard is simple: if
-                it went offline for a week, would the institution feel it in daily operations?
-              </p>
-            </div>
-
-            <div class="feature-layout">
-              <div class="feature-grid">
-                <article class="info-card animate-in info-card-edu">
-                  <div class="card-bg-image" style="background-image: url('./pexels-tosin-olowoleni-2148141635-34162719.jpg')"></div>
-                  <div class="icon-chip icon-chip-blue">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 5h14v3H5V5Zm0 5h14v9H5v-9Zm3 2v5h2v-5H8Zm4 0v5h2v-5h-2Z" />
-                    </svg>
-                  </div>
-                  <h3>EduManage</h3>
-                  <p>
-                    Complete school operations platform—admissions, fees, academics, communication—designed for African institutions. Works offline, syncs when connected, never loses data.
-                  </p>
-                  <a href="#roadmap">See roadmap</a>
-                </article>
-
-                <article class="info-card animate-in info-card-edu">
-                  <div class="card-bg-image" style="background-image: url('./pexels-amurephotography-9833515.jpg')"></div>
-                  <div class="icon-chip icon-chip-gold">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 3 4 8v8l8 5 8-5V8l-8-5Zm0 2.3 5.5 3.4v6.6L12 18.7 6.5 15.3V8.7L12 5.3Z" />
-                    </svg>
-                  </div>
-                  <h3>Mshauri Engineer</h3>
-                  <p>
-                    Every feature is built from real-world observation. Our teams work alongside institutions to understand workflows before writing code. The result: software that fits how you actually work.
-                  </p>
-                  <a href="#principles">See principles</a>
-                </article>
-
-                <article class="info-card animate-in info-card-edu">
-                  <div class="card-bg-image" style="background-image: url('./pexels-caglar-carkaci-2151246867-31730655.jpg')"></div>
-                  <div class="icon-chip icon-chip-mint">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M4 6h16v2H4V6Zm2 4h12v8H6v-8Zm3 2v4h2v-4H9Zm4 0v4h2v-4h-2Z" />
-                    </svg>
-                  </div>
-                  <h3>Local-first stack</h3>
-                  <p>
-                    Designed for unpredictable connectivity. Your data saves instantly to the device, syncs when possible, and is backed up automatically. No internet? No problem.
-                  </p>
-                  <a href="#engineering">View standard</a>
-                </article>
-              </div>
-
-              <aside class="spending-card animate-in">
-                <div class="spending-header">
-                  <span>Current build priorities</span>
-                  <strong>Active development</strong>
-                </div>
-                <div class="mini-chart">
-                  <span style="height: 52%"></span>
-                  <span style="height: 61%"></span>
-                  <span style="height: 70%"></span>
-                  <span style="height: 78%"></span>
-                  <span style="height: 89%"></span>
-                  <span style="height: 95%"></span>
-                </div>
-                <div class="expense-list">
-                  <div class="expense-item">
-                    <span>PWA offline foundation</span>
-                    <strong>✓</strong>
-                  </div>
-                  <div class="expense-item">
-                    <span>M-PESA Daraja integration</span>
-                    <strong>✓</strong>
-                  </div>
-                  <div class="expense-item">
-                    <span>School onboarding wizard</span>
-                    <strong>✓</strong>
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>
-
-        <section class="section solution animate-in">
-          <div class="container solution-grid">
-            <div class="section-heading compact">
-              <span class="eyebrow">Our vision</span>
-              <h2>Starting with schools, growing to serve all community institutions</h2>
-              <p>
-                Schools are at the heart of every community—and they're our starting point. As we learn and grow, we'll expand to serve agriculture, healthcare, and beyond.
-              </p>
-              <a class="button button-primary" href="#roadmap">See our vision</a>
-            </div>
-
-            <div class="solution-panel">
-              <div class="solution-visual">
-                <div class="solution-screen">
-                  <span class="tag">Community coverage</span>
-                  <div class="solution-chart">
-                    <span style="height: 32%"></span>
-                    <span style="height: 48%"></span>
-                    <span style="height: 65%"></span>
-                    <span style="height: 74%"></span>
-                    <span style="height: 86%"></span>
-                    <span style="height: 100%"></span>
-                  </div>
-                </div>
-                <div class="solution-badge">
-                  <span>Education → Agriculture → Health → Transport → Cities</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section metrics animate-in" id="engineering">
-          <div class="container metrics-grid">
-            <div class="section-heading compact">
-              <span class="eyebrow">Engineering</span>
-              <h2>Built for the connectivity conditions institutions actually face</h2>
-              <p>
-                Our software works offline, syncs automatically when connected, and never loses your data. 
-                We build for places where internet can be unpredictable.
-              </p>
-            </div>
-
-            <div class="metrics-panel">
-              <div class="metric-item">
-                <strong class="metric-number" data-target="5">0</strong>
-                <span>AI adoption minimum</span>
-              </div>
-              <div class="metric-item">
-                <strong class="metric-number" data-target="3">0</strong>
-                <span>backup layers minimum</span>
-              </div>
-              <div class="metric-floating metric-floating-a">IndexedDB · Workbox · CRDTs</div>
-              <div class="metric-floating metric-floating-b">Local-first architecture</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section integrations animate-in">
-          <div class="container integrations-grid">
-            <div class="section-heading compact">
-              <span class="eyebrow">Sector map</span>
-              <h2>A connected ecosystem across the systems that shape daily life</h2>
-              <p>
-                Starting with education, we're building tools that will help communities 
-                manage agriculture, health, transport, and more—all connected.
-              </p>
-              <a class="button button-primary" href="#roadmap">See our roadmap</a>
-            </div>
-
-            <div class="sector-grid" aria-label="Sector map">
-              <div class="sector-card" style="--sector-img: url('./pexels-tosin-olowoleni-2148141635-34162719.jpg')">
-                <span class="sector-label">Education</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-darkshadephotos-30801781.jpg')">
-                <span class="sector-label">Agriculture</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-zeoxs-11782003.jpg')">
-                <span class="sector-label">Health</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-caglar-carkaci-2151246867-31730655.jpg')">
-                <span class="sector-label">Energy</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-giantasparagus-35501735.jpg')">
-                <span class="sector-label">Water</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-abdullatif-bukeni-1296376-35238178.jpg')">
-                <span class="sector-label">Transport</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-aedrian-10653885.jpg')">
-                <span class="sector-label">Commerce</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-mukula-igavinchi-443985808-15496531.jpg')">
-                <span class="sector-label">Smart Cities</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-bilal-ahmed-297238753-14020705.jpg')">
-                <span class="sector-label">Logistics</span>
-              </div>
-              <div class="sector-card" style="--sector-img: url('./pexels-whittington-30415070.jpg')">
-                <span class="sector-label">Utilities</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section testimonials animate-in" id="principles">
-          <div class="container">
-            <div class="section-heading">
-              <span class="eyebrow">Operating principles</span>
-              <h2>The standards that shape how Ansai builds</h2>
-              <p>
-                We believe technology should serve people, not the other way around. Every decision we make starts with the humans who will use what we build.
-              </p>
-            </div>
-
-            <div class="testimonial-grid">
-              <article class="testimonial-card animate-in">
-                <p>
-                  Every feature begins with a real person in a real institution. We name them, understand their day, and build for their reality.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">UE</span>
-                  <div>
-                    <strong>Utu Engineering</strong>
-                    <span>Human dignity in every line of code</span>
-                  </div>
-                </div>
-              </article>
-              <article class="testimonial-card animate-in">
-                <p>
-                  Collaboration without politics. Credit is shared, feedback flows freely, and the best idea wins regardless of where it comes from.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">PM</span>
-                  <div>
-                    <strong>Pamoja</strong>
-                    <span>Collective over individual</span>
-                  </div>
-                </div>
-              </article>
-              <article class="testimonial-card animate-in">
-                <p>
-                  Our teams spend time in the field, observing real workflows. What they learn shapes what we build next.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">MS</span>
-                  <div>
-                    <strong>Mshauri model</strong>
-                    <span>Real observation, real solutions</span>
-                  </div>
-                </div>
-              </article>
-              <article class="testimonial-card animate-in">
-                <p>
-                  Limited resources aren't blockers—they're design constraints. We make great things with what's available.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">CI</span>
-                  <div>
-                    <strong>Constraint-led innovation</strong>
-                    <span>Creativity through limits</span>
-                  </div>
-                </div>
-              </article>
-              <article class="testimonial-card animate-in">
-                <p>
-                  Real feedback beats speculation. We'd rather ship, learn, and improve than plan endlessly.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">SL</span>
-                  <div>
-                    <strong>Ship to learn</strong>
-                    <span>Iterate through reality</span>
-                  </div>
-                </div>
-              </article>
-              <article class="testimonial-card animate-in">
-                <p>
-                  Your data belongs to you. We hold it in trust, secure it fiercely, and never treat it as ours.
-                </p>
-                <div class="testimonial-author">
-                  <span class="avatar">IT</span>
-                  <div>
-                    <strong>Institutional trust</strong>
-                    <span>Your data, your ownership</span>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section security animate-in">
-          <div class="container security-grid">
-            <div class="section-heading compact">
-              <span class="eyebrow">Infrastructure</span>
-              <h2>Every Ansai product is designed for reliability, trust, and local realities</h2>
-              <a class="button button-primary" href="#frameworks">Learn more</a>
-            </div>
-
-            <div class="security-panel">
-              <div class="security-visual">
-                <div class="security-ring"></div>
-                <div class="security-core">Never lose data</div>
-              </div>
-              <div class="security-list">
-                <article>
-                  <span>1</span>
-                  <div>
-                    <h3>Local-first</h3>
-                    <p>All data is stored and processed on the device first. The application works fully offline, ensuring operations continue even in areas with no connectivity.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>2</span>
-                  <div>
-                    <h3>Sync-always</h3>
-                    <p>When connectivity is restored, the system automatically synchronizes data across devices and to the cloud, resolving conflicts intelligently.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>3</span>
-                  <div>
-                    <h3>Backup-automated</h3>
-                    <p>Multiple layers of redundancy ensure data is never lost—stored locally, synced to cloud, and backed up automatically.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section blog animate-in" id="frameworks">
-          <div class="container">
-            <div class="section-heading">
-              <span class="eyebrow">Core frameworks</span>
-              <h2>The documents that guide how Ansai operates</h2>
-              <p>
-                Our frameworks define who we are, how we work, and what we stand for as a company building infrastructure for African institutions.
-              </p>
-            </div>
-
-            <div class="blog-grid">
-              <article class="blog-card animate-in">
-                <span class="blog-kicker">Identity</span>
-                <h3>Group Identity</h3>
-                <p>
-                  Defines who Ansai is, our mission, vision, and the values that guide every decision we make as a company.
-                </p>
-                <a href="#" class="framework-link">View framework →</a>
-              </article>
-              <article class="blog-card animate-in">
-                <span class="blog-kicker">Culture</span>
-                <h3>Culture Constitution</h3>
-                <p>
-                  The principles that shape how we work together, collaborate across teams, and maintain our standards.
-                </p>
-                <a href="#" class="framework-link">View framework →</a>
-              </article>
-              <article class="blog-card animate-in">
-                <span class="blog-kicker">Engineering</span>
-                <h3>Engineering Principles</h3>
-                <p>
-                  Our technical philosophy—how we build software that works reliably in challenging connectivity conditions.
-                </p>
-                <a href="#" class="framework-link">View framework →</a>
-              </article>
-              <article class="blog-card animate-in">
-                <span class="blog-kicker">Brand</span>
-                <h3>Brand System</h3>
-                <p>
-                  Visual and verbal identity guidelines that ensure consistent representation across all touchpoints.
-                </p>
-                <a href="#" class="framework-link">View framework →</a>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section pricing animate-in" id="roadmap">
-          <div class="container pricing-shell">
-            <div class="section-heading compact">
-              <span class="eyebrow">Vision</span>
-              <h2>Expanding to serve communities everywhere</h2>
-              <p>
-                Starting with education, we're building software that can serve any institution communities depend on.
-                Our roadmap is guided by the <a href="#frameworks" style="color: var(--gold-soft);">Group Identity</a> and 
-                <a href="#frameworks" style="color: var(--gold-soft);">Engineering Principles</a> frameworks.
-              </p>
-            </div>
-
-            <div class="pricing-cards">
-              <article class="plan-card plan-card-featured animate-in">
-                <span class="plan-tag">Active</span>
-                <h3>Education</h3>
-                <strong>Now</strong>
-                <p>Our platform helps schools manage operations, finances, and communications seamlessly.</p>
-                <ul>
-                  <li>Complete school management</li>
-                  <li>Financial transparency</li>
-                  <li>Parent-school communication</li>
-                </ul>
-              </article>
-              <article class="plan-card animate-in">
-                <span class="plan-tag">Coming</span>
-                <h3>Agriculture</h3>
-                <strong>Next</strong>
-                <p>Supporting cooperatives and farming operations with the same reliability and ease.</p>
-                <ul>
-                  <li>Cooperative management</li>
-                  <li>Supply chain tools</li>
-                  <li>Market connectivity</li>
-                </ul>
-              </article>
-              <article class="plan-card animate-in">
-                <span class="plan-tag">Future</span>
-                <h3>Health</h3>
-                <strong>Horizon</strong>
-                <p>Bringing reliable software to clinics and community health systems.</p>
-                <ul>
-                  <li>Clinic operations</li>
-                  <li>Patient management</li>
-                  <li>Health record access</li>
-                </ul>
-              </article>
-              <article class="plan-card animate-in">
-                <span class="plan-tag">Future</span>
-                <h3>Utilities</h3>
-                <strong>Scale</strong>
-                <p>Software for essential services—power, water, and community resources.</p>
-                <ul>
-                  <li>Service management</li>
-                  <li>Usage tracking</li>
-                  <li>Community access</li>
-                </ul>
-              </article>
-              <article class="plan-card animate-in">
-                <span class="plan-tag">Long term</span>
-                <h3>Mobility &amp; Cities</h3>
-                <strong>Long term</strong>
-                <p>Infrastructure for urban systems and movement of people and goods.</p>
-                <ul>
-                  <li>Logistics and mobility</li>
-                  <li>Value exchange infrastructure</li>
-                  <li>Urban operating systems</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section faq animate-in">
-          <div class="container faq-grid">
-            <div class="section-heading compact">
-              <span class="eyebrow">FAQ</span>
-              <h2>Common questions</h2>
-              <p>
-                Quick answers about what we do, how we do it, and why we do it differently.
-              </p>
-              <a class="button button-ghost" href="#contact">Start a conversation</a>
-            </div>
-
-            <div class="faq-list">
-              <details open>
-                <summary>What is Ansai Technologies?</summary>
-                <p>
-                  Ansai is an operational infrastructure company building software for the institutions that shape African life. We create reliable, local-first systems that work every day—starting with schools and expanding across education, agriculture, health, and essential services.
-                </p>
-              </details>
-              <details>
-                <summary>Why does Ansai start with schools?</summary>
-                <p>
-                  Schools are the most complex institutional environments—managing students, staff, finances, communications, and compliance simultaneously. If we can build software that works reliably for schools, we can serve any institution. Education is also foundational: every community depends on schools.
-                </p>
-              </details>
-              <details>
-                <summary>What makes EduManage different?</summary>
-                <p>
-                  EduManage is built local-first, meaning it works offline and syncs when connected. It integrates M-PESA natively, runs on any device, and is designed for the actual connectivity conditions schools face—not ideal scenarios. Every feature prioritizes reliability over novelty.
-                </p>
-              </details>
-              <details>
-                <summary>How does Ansai build for unreliable connectivity?</summary>
-                <p>
-                  Our local-first architecture stores data on-device first using IndexedDB, syncs automatically with CRDTs for conflict resolution, and maintains multiple backup layers. Your work is never lost. The 30-second sync target ensures high-value records reach the server quickly when connectivity returns.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer" id="contact">
-        <div class="container footer-grid">
-          <div>
-            <a class="brand footer-brand" href="#top">
-              <img class="brand-logo" src="./ansai 1.svg" alt="Ansai" />
-              <span class="brand-text">
-                <strong>Ansai</strong>
-                <span>Technologies</span>
-              </span>
-            </a>
-            <p>
-              Built in Nairobi to give African institutions the clarity, dignity, and operational confidence to function every day.
-            </p>
-            <a class="button button-primary" href="#frameworks">View Group Identity</a>
-          </div>
-
-          <div>
-            <h3>Navigate</h3>
-            <a href="#about">About</a>
-            <a href="#products">Products</a>
-            <a href="#principles">Principles</a>
-            <a href="#roadmap">Vision</a>
-          </div>
-
-          <div>
-            <h3>Frameworks</h3>
-            <a href="#frameworks">Group Identity</a>
-            <a href="#frameworks">Culture Constitution</a>
-            <a href="#frameworks">Engineering Principles</a>
-            <a href="#frameworks">Brand System</a>
-          </div>
-
-          <div>
-            <h3>Contact</h3>
-            <span class="footer-text-link">Nairobi, Kenya</span>
-            <a href="https://ansai.co">ansai.co</a>
-            <a href="#faq">FAQ</a>
-          </div>
+        <div>
+          <h3>Navigate</h3>
+          <a href="#products">What we build</a>
+          <a href="#engineering">Engineering</a>
+          <a href="#principles">Principles</a>
+          <a href="#roadmap">Roadmap</a>
         </div>
-        <div class="container footer-bottom">
-          <span>&copy;2026 Ansai Technologies</span>
-          <div>
-            <a href="#frameworks">Frameworks</a>
-            <a href="#top">Back to top</a>
-          </div>
+
+        <div>
+          <h3>Frameworks</h3>
+          <a href="./frameworks/group-identity.html">Group identity</a>
+          <a href="./frameworks/culture-constitution.html">Culture constitution</a>
+          <a href="./frameworks/engineering-principles.html">Engineering principles</a>
+          <a href="./frameworks/design-playbook.html">Design playbook</a>
         </div>
-      </footer>
-    </div>
+
+        <div>
+          <h3>Company</h3>
+          <span class="footer-text">Nairobi, Kenya</span>
+          <a href="mailto:hello@ansaitechnologies.co.ke">hello@ansaitechnologies.co.ke</a>
+          <a href="https://ansaitechnologies.co.ke">ansaitechnologies.co.ke</a>
+          <a href="./careers.html">Careers</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Ansai Technologies</span>
+        <div>
+          <a href="#frameworks">Frameworks</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

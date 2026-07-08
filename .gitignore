@@ -1,0 +1,5 @@
+# Local inspiration videos — not part of the shipped site
+*.mp4
+
+# IDE
+.idea/

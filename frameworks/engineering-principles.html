@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering principles — GEP-001 · Ansai Technologies</title>
+    <meta name="description" content="The Ansai Engineering Principles: the non-negotiable technical standards every Ansai product must meet." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html" aria-label="Ansai Technologies home">
+          <img class="brand-logo" src="../ansai 1.svg" alt="Ansai" />
+          <span class="brand-text">
+            <strong>Ansai</strong>
+            <span>Technologies</span>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav">
+          <a href="../index.html#frameworks">← All frameworks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc-page container">
+      <div class="doc-header">
+        <span class="mono-label">GEP-001 · References GID-001</span>
+        <h1 class="h1">Engineering <strong>principles</strong></h1>
+        <p class="lead">The non-negotiable technical standards every Ansai product must meet.</p>
+        <div class="doc-provenance">
+          Rendered verbatim from the source document (v1.0). It predates the July 2026 category
+          update: where it reads "institutions," current external language is "organizations."
+          This is a technical document and names specific tools, including AI, plainly.
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <h2>01 — The data architecture <strong>standard</strong></h2>
+        <blockquote>Local-first · Sync-always · Backup-automated · Loss-never</blockquote>
+        <p>
+          Every Ansai product that handles institutional data must implement this data
+          architecture. No exceptions. This is not a recommendation — it is the minimum standard
+          for any product that calls itself operational infrastructure.
+        </p>
+        <dl>
+          <div class="doc-term">
+            <dt>Local-first</dt>
+            <dd>Data is written to the device first — immediately, without waiting for a network response. The sync to the server happens in the background.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Sync-always</dt>
+            <dd>Continuous background sync when connectivity exists. Maximum 30-second gap for critical data (financial records, attendance). Exponential backoff on failure.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Backup-automated</dt>
+            <dd>Server replicates to backup automatically. Three layers minimum: local write → server sync → off-site backup. No manual backup processes.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Loss-never</dt>
+            <dd>A user who enters data on a device with no internet connection must never lose that data. It is written locally and synced when connectivity returns.</dd>
+          </div>
+        </dl>
+        <h3>Implementation standard</h3>
+        <p>
+          Service Workers (Workbox) for background sync and caching. IndexedDB for local structured
+          storage. CRDTs for conflict-free merge logic when a device reconnects after an offline
+          period. These are the required tools. Equivalent alternatives require documented
+          justification and founder approval.
+        </p>
+
+        <h2>02 — The AI adoption <strong>standard</strong></h2>
+        <p>
+          Every engineer on an Ansai product must operate at Level 5 minimum on the AI adoption
+          scale. Level 6 is the target hire profile. The scale is observable and testable — ask
+          any candidate to describe how they built something recently. The answer tells you their
+          level.
+        </p>
+        <dl>
+          <div class="doc-term">
+            <dt class="mono-data">Level 1</dt>
+            <dd>Writes code by hand. Uses tab completion occasionally. Not an Ansai hire.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 2</dt>
+            <dd>IDE agent, supervised. Reviews and approves every agent action. Not at standard yet.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 3</dt>
+            <dd>IDE agent, unsupervised. Permission gates off. Agent runs automatically. Approaching standard.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 4</dt>
+            <dd>Wide agent, diff mode. Engineer reviews diffs, not code. At minimum standard.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 5</dt>
+            <dd>CLI single agent, run from the terminal. Reviews output, not generation. Minimum Ansai standard.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 6</dt>
+            <dd>CLI multi-agent, 3–5 in parallel. Target Ansai hire profile. One engineer produces what five produced in 2022.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 7</dt>
+            <dd>10+ agents hand-managed. Senior engineering leadership profile.</dd>
+          </div>
+          <div class="doc-term">
+            <dt class="mono-data">Level 8</dt>
+            <dd>Builds own orchestrator. Founding CTO profile.</dd>
+          </div>
+        </dl>
+        <h3>The verification test</h3>
+        <p>
+          In any interview, ask: walk me through the last significant thing you built and how you
+          built it. If the answer does not involve AI agents doing the heavy lifting while the
+          engineer directed and verified — they are below Level 4. If they describe running
+          multiple parallel agents from the terminal — Level 6. Hire accordingly.
+        </p>
+
+        <h2>03 — Quality <strong>non-negotiables</strong></h2>
+        <h3>Tests before features</h3>
+        <p>
+          No feature ships to production without tests covering its critical path. AI-generated
+          code accumulates technical debt faster than human-written code and must be tested more
+          rigorously, not less. The faster we ship with AI assistance, the more robust the test
+          suite must be.
+        </p>
+        <h3>Critical path test coverage — minimum</h3>
+        <dl>
+          <div class="doc-term">
+            <dt>Financial data</dt>
+            <dd>Fee payments, balance calculations, duplicate prevention. 100% critical path coverage before any school handles real money.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Authentication</dt>
+            <dd>Login, account lockout, token validation. Security tests must pass before any production deployment.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Tenant isolation</dt>
+            <dd>Cross-tenant data access prevention. The foundational security guarantee of any multi-tenant Ansai product.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Data sync</dt>
+            <dd>Offline write, reconnect sync, conflict resolution. The local-first architecture must be verified under real connectivity conditions.</dd>
+          </div>
+        </dl>
+        <h3>Code review standard</h3>
+        <p>
+          The first pull request from every new engineer is reviewed in extreme detail by the
+          technical lead. This is the standard-setting moment. After that, code review is
+          continuous, but the initial review sets the bar that all subsequent work is held to.
+        </p>
+        <h3>CI/CD requirement</h3>
+        <p>
+          No code reaches production without passing automated tests. Auto-deploy on push with no
+          quality gate is not acceptable for any Ansai product handling real institutional data.
+          GitHub Actions or equivalent must gate every deployment.
+        </p>
+
+        <h2>04 — Security <strong>baseline</strong></h2>
+        <p>
+          Every Ansai product must meet these security standards as a baseline before any school,
+          farm, clinic, or institutional user is onboarded.
+        </p>
+        <dl>
+          <div class="doc-term">
+            <dt>Authentication</dt>
+            <dd>JWT with refresh token rotation. Short-lived access tokens (15 min). Long-lived refresh tokens (7 days, httpOnly cookie).</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Password hashing</dt>
+            <dd>bcrypt, minimum 12 rounds. No MD5, SHA-1, or unsalted hashes anywhere in the codebase.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Rate limiting</dt>
+            <dd>Login endpoints: 10 requests/minute. Public-facing endpoints: configurable per endpoint risk level.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Account lockout</dt>
+            <dd>5 consecutive failed login attempts triggers lockout. Counter resets on successful login.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Data isolation</dt>
+            <dd>Multi-tenant products: every query scoped to tenant ID, enforced at middleware level, not just application level.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Audit logging</dt>
+            <dd>Every data mutation recorded with user ID, timestamp, IP address, and JSON diff. Best-effort — failures do not block operations.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>File uploads</dt>
+            <dd>MIME type validation. Size limits enforced server-side. UUID-based storage keys. No user-controlled file paths.</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Dependencies</dt>
+            <dd>Regular security patching. No known critical CVEs in production dependencies. Automated dependency scanning in CI.</dd>
+          </div>
+        </dl>
+
+        <h2>05 — The infrastructure-aware <strong>engineering standard</strong></h2>
+        <p>
+          Every Ansai product is designed for the connectivity conditions that African institutions
+          actually experience, not the conditions assumed in a developed-market office. This is not
+          a feature — it is the engineering philosophy.
+        </p>
+        <ul>
+          <li>Every feature is designed for 2G connectivity first. Fibre is the upgrade path, not the assumption.</li>
+          <li>Bundle sizes are minimised. Every kilobyte costs real money for users on mobile data.</li>
+          <li>Images are compressed, lazy-loaded, and cached aggressively.</li>
+          <li>API responses are paginated and minimal. Over-fetching is a performance violation.</li>
+          <li>Failure states are designed. Every screen that loads data must handle the case where that data does not arrive. Spinners that time out silently are unacceptable.</li>
+        </ul>
+
+        <h2>06 — Document <strong>control</strong></h2>
+        <dl>
+          <div class="doc-term">
+            <dt>Document ID</dt>
+            <dd class="mono-data">GEP-001</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Version</dt>
+            <dd>1.0</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Parent doc</dt>
+            <dd>GID-001 — Ansai Group Identity Document</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Owner</dt>
+            <dd>Technical Lead — Ansai Technologies</dd>
+          </div>
+          <div class="doc-term">
+            <dt>Review cycle</dt>
+            <dd>Every six months — or when a new product vertical is added</dd>
+          </div>
+        </dl>
+
+        <nav class="doc-footer-nav">
+          <a href="./culture-constitution.html">← Culture constitution</a>
+          <a href="./design-playbook.html">Design playbook →</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Ansai Technologies</span>
+        <div>
+          <a href="../index.html">Home</a>
+          <a href="../index.html#frameworks">Frameworks</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
