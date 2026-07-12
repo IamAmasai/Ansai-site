@@ -37,8 +37,9 @@
           shared token system without breaking it. One family. Distinct identities.
         </p>
         <div class="doc-provenance">
-          Rendered verbatim from the source document (v1.0). The site you are reading is built to
-          this playbook.
+          Updated to v1.1 in July 2026 to lock the single-accent web direction. This page is the
+          current authority; the .docx source in the repository remains v1.0 and should be
+          regenerated from it. The site you are reading is built to this playbook.
         </div>
       </div>
 
@@ -196,8 +197,8 @@
             <dd>DM Sans for body and display. DM Mono for data and code.</dd>
           </div>
           <div class="doc-term">
-            <dt class="mono-data">--radius-sm / -md / -lg / -xl</dt>
-            <dd>8px subtle corners · 12px standard cards · 16px hero elements · 20px large containers.</dd>
+            <dt class="mono-data">--radius-btn / --radius-card</dt>
+            <dd>Two scales, one per element type: 8px buttons, 20px cards. No exceptions. (v1.1: replaces the earlier four-step radius scale.)</dd>
           </div>
         </dl>
         <h3>Product tokens — the variation point</h3>
@@ -222,8 +223,12 @@
         <h3>Current product palettes</h3>
         <dl>
           <div class="doc-term">
+            <dt>Ansai web (v1.1)</dt>
+            <dd class="mono-data">#1c5cf5 sole accent on all surfaces · #2de8e8 reserved for the logo mark only</dd>
+          </div>
+          <div class="doc-term">
             <dt>EduManage</dt>
-            <dd class="mono-data">#2de8e8 (cyan) → #1c5cf5 (blue)</dd>
+            <dd class="mono-data">#2de8e8 (cyan) → #1c5cf5 (blue), product UI only, not web surfaces</dd>
           </div>
           <div class="doc-term">
             <dt>AgriX (future)</dt>
@@ -263,7 +268,7 @@
           </div>
           <div class="doc-term">
             <dt>No gradients</dt>
-            <dd>Use solid flat fills. The brand gradient is the single exception — used only on the mark, CTAs, and data highlights.</dd>
+            <dd>Use solid flat fills. The brand gradient lives only inside the logo mark artwork. (v1.1: CTAs and data highlights are solid #1c5cf5; the earlier CTA-gradient exception is retired.)</dd>
           </div>
         </dl>
 
@@ -279,7 +284,7 @@
           </div>
           <div class="doc-term">
             <dt>Border radius</dt>
-            <dd>Consistent use of the radius scale. Cards: 12px. Hero containers: 16px. Buttons: 8px. Pills: 100px. Never arbitrary values.</dd>
+            <dd>Cards: 20px. Buttons: 8px. Pills: 100px. One scale per element type, never arbitrary values. (v1.1: cards moved from 12px to 20px.)</dd>
           </div>
           <div class="doc-term">
             <dt>Dark mode</dt>
@@ -324,7 +329,17 @@
           </div>
         </dl>
 
-        <h2>08 — Document <strong>control</strong></h2>
+        <h2>08 — Version 1.1 <strong>changelog</strong></h2>
+        <p>July 2026, following the site overhaul recorded in the pivot document, Section 13:</p>
+        <ul>
+          <li>#1c5cf5 is the sole accent on web surfaces; #2de8e8 is reserved for the logo mark and must not appear anywhere else on a page.</li>
+          <li>The brand gradient is retired from CTAs and data highlights; it survives only inside the logo mark artwork.</li>
+          <li>Radius scale reduced to two steps: 8px buttons, 20px cards, one scale per element type.</li>
+          <li>Motion budget per page: one scroll-triggered staggered reveal, fired once, nothing else on load or on a loop.</li>
+          <li>Zero em-dashes in shipped site copy; one CTA label per intent across nav, hero, and footer.</li>
+        </ul>
+
+        <h2>09 — Document <strong>control</strong></h2>
         <dl>
           <div class="doc-term">
             <dt>Document ID</dt>
@@ -332,7 +347,7 @@
           </div>
           <div class="doc-term">
             <dt>Version</dt>
-            <dd>1.0</dd>
+            <dd>1.1 (July 2026), web page is the current authority</dd>
           </div>
           <div class="doc-term">
             <dt>Parent doc</dt>

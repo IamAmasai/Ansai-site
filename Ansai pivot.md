@@ -301,3 +301,36 @@ Ansai builds digital infrastructure for African organizations — schools, busin
 - [ ] Copyright year generated dynamically
 - [ ] The locked one-liner (12.1) appears verbatim somewhere above the fold
 - [ ] Nothing on the page describes Ansai as an "AI agent company" or leads with "agentic" anywhere outside a clearly marked technical/engineering section
+
+---
+
+## 13. DESIGN ADDENDUM — July 2026 (supersedes 12.4 token naming and 12.6 design language)
+
+The site was rebuilt to Section 12 in July 2026, then overhauled on the visual layer to a tasteskill v2 spec (`ansai-redesign-prompt.md` in this repo). Where this section conflicts with 12.4 or 12.6, this section wins. Copy, IA, and the locked terminology of Sections 2 and 12.1 are unchanged.
+
+### 13.1 Locked tokens (current)
+
+| Token | Value | Role |
+|---|---|---|
+| `--navy` | `#111C27` | page background |
+| `--blue` | `#1C5CF5` | **sole accent**, used identically everywhere: CTAs, icons, links, featured tiles, data highlights |
+| `--teal` | `#2DE8E8` | **logo mark only**, never anywhere else on a page |
+| `--white` | `#ffffff` | primary text on dark |
+| `--muted` | `#8B98A8` | secondary text |
+| `--muted-dim` | `#5A6C82` / `#7A8595` | tertiary text, labels |
+
+The 12.4 instruction to rename variables to `--accent-blue` and `--accent-cyan` is retired: there is no cyan CSS token anymore. The brand gradient is likewise retired from CTAs and surfaces; it survives only inside the logo mark artwork.
+
+### 13.2 Shape, layout, and motion locks
+
+- Radius: 8px buttons, 20px cards, one scale per element type, no exceptions.
+- Nav: single line, 64px default height, 80px maximum.
+- Hero: asymmetric split, headline and CTA left-aligned, solid blue panel on the right that bleeds past its own column edge. Headline maximum 2 lines on desktop. No tagline, trust strip, or pricing teaser inside the hero.
+- Feature grid: bento with exact cell count for the content, one larger tile, at most one fully saturated blue cell, remaining cells tinted (`rgba(28,92,245,0.09)`) or neutral surface.
+- Motion budget per page: one scroll-triggered staggered reveal (currently the bento cells), fires once, nothing else animates on load or on a loop, everything wrapped in `prefers-reduced-motion`.
+- Zero em-dashes in shipped site copy. The 12.1 one-liner ships in its approved comma form: "Ansai builds digital infrastructure for African organizations: schools, businesses, and enterprises, making their data queryable and actionable through AI." (Terminology unchanged; punctuation adapted by founder decision, July 2026.)
+- One CTA label per intent across nav, hero, and footer. Contact intent label: "Start a conversation" (mailto:hello@ansaitechnologies.co.ke).
+
+### 13.3 Document knock-on
+
+GDP-001 (Design Playbook) was updated to v1.1 on its rendered web page (`frameworks/design-playbook.html`) to reflect the single-accent and radius locks; the `.docx` source in this repo remains v1.0 and should be regenerated from the web page when convenient. The rendered page is the current authority.
