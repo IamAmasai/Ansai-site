@@ -316,19 +316,39 @@
     }
     .comm-note strong { color: var(--navy); font-weight: 500; }
 
-    /* PROCESS */
-    .proc-list { display: flex; flex-direction: column; }
+    /* PROCESS — stepper: sequential content justifies the pattern */
+    .proc-list { display: flex; flex-direction: column; position: relative; }
+    .proc-list::before {
+      content: ""; position: absolute;
+      left: 21px; top: 2.5rem; bottom: 2.5rem;
+      width: 2px; background: var(--border);
+    }
     .proc-item {
       display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 1.5rem; padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
+      grid-template-columns: 44px 1fr;
+      gap: 1.5rem; padding: 1.6rem 0;
+      position: relative;
     }
-    .proc-item:last-child { border-bottom: none; }
     .proc-num {
       font-family: 'DM Mono', monospace;
       font-size: 12px; font-weight: 500;
-      color: var(--blue); padding-top: 3px;
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 100px;
+      color: var(--muted);
+      position: relative; z-index: 1;
+    }
+    .proc-item.active .proc-num {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: var(--white);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .proc-num {
+        transition: border-color 0.3s ease-out, background 0.3s ease-out, color 0.3s ease-out;
+      }
     }
     .proc-body h4 {
       font-family: 'DM Sans', sans-serif;
@@ -656,6 +676,19 @@
       });
     }, { threshold: 0.08 });
     els.forEach(el => obs.observe(el));
+
+    // Stepper: each step's node activates once as it enters view,
+    // communicating progress through the real four-step sequence.
+    const steps = document.querySelectorAll('.proc-item');
+    const stepObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('active');
+          stepObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    steps.forEach(s => stepObs.observe(s));
 
     const yearNode = document.getElementById('careers-year');
     if (yearNode) yearNode.textContent = new Date().getFullYear().toString();
