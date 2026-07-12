@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
@@ -37,22 +39,28 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear().toString();
 }
 
-const revealElements = document.querySelectorAll(".reveal");
+// Motion budget: one scroll-triggered reveal on the bento cells,
+// staggered, fires once. Nothing else animates.
+const bentoCells = document.querySelectorAll(".bento-cell");
 
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
+if (bentoCells.length && "IntersectionObserver" in window) {
+  bentoCells.forEach((cell, index) => {
+    cell.style.setProperty("--stagger", `${index * 80}ms`);
+  });
+
+  const bentoObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
+          bentoObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.15 }
   );
 
-  revealElements.forEach((el) => revealObserver.observe(el));
+  bentoCells.forEach((cell) => bentoObserver.observe(cell));
 } else {
-  revealElements.forEach((el) => el.classList.add("visible"));
+  bentoCells.forEach((cell) => cell.classList.add("visible"));
 }
