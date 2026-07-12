@@ -328,6 +328,7 @@ The 12.4 instruction to rename variables to `--accent-blue` and `--accent-cyan` 
 - Hero: asymmetric split, headline and CTA left-aligned, solid blue panel on the right that bleeds past its own column edge. Headline maximum 2 lines on desktop. No tagline, trust strip, or pricing teaser inside the hero.
 - Feature grid: bento with exact cell count for the content, one larger tile, at most one fully saturated blue cell, remaining cells tinted (`rgba(28,92,245,0.09)`) or neutral surface.
 - Motion budget per page: one scroll-triggered staggered reveal (currently the bento cells), fires once, nothing else animates on load or on a loop, everything wrapped in `prefers-reduced-motion`.
+- Pointer feedback is outside the load/loop budget and is allowed on bento cells only: cursor-following border glow, subtle tilt and magnetism, and a click ripple (MagicBento pattern, hand-ported to vanilla JS, recolored to the sole blue accent, white on the saturated tile; particles and spotlight deliberately excluded). Disabled on touch devices, small screens, and under reduced motion.
 - Zero em-dashes in shipped site copy. The 12.1 one-liner ships in its approved comma form: "Ansai builds digital infrastructure for African organizations: schools, businesses, and enterprises, making their data queryable and actionable through AI." (Terminology unchanged; punctuation adapted by founder decision, July 2026.)
 - One CTA label per intent across nav, hero, and footer. Contact intent label: "Start a conversation" (mailto:hello@ansaitechnologies.co.ke).
 
