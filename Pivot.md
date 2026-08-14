@@ -291,7 +291,7 @@ Ansai builds agentic infrastructure for African organizations — schools, busin
 
 ### 12.7 Pre-ship checklist — run this before anything goes live
 
-- [ ] Zero instances of "institution" or "digital infrastructure" anywhere in shipped copy
+- [ ] Zero instances of "institution" or "operational infrastructure" anywhere in shipped copy
 - [ ] Zero emoji used as icons
 - [ ] Zero decorative charts without real, labeled data
 - [ ] Zero stock photography

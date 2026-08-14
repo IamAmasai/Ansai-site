@@ -13,12 +13,12 @@
   --ink: #0F172A;
   --ink-soft: #475569;
   --signal-orange: #F97316;
-  --signal-blue: #2E91F2; /* Vibrant startup orange */
+  --signal-blue: #2E91F2; /* Vibrant startup blue */
   --surface: #FFFFFF;
 
   --bg-primary: var(--field-white);
   --bg-secondary: var(--field-gray);
-  --bg-tertiary: var(--bg-tertiary);
+  --bg-tertiary: var(--field-dawn);
   
   --text-primary: var(--ink);
   --text-secondary: var(--ink-soft);
