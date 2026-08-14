@@ -6,14 +6,14 @@
    ============================================================ */
 
 :root {
-  /* Color - Ansai Redesign System */
-  --field-blush: #F6E9E4;
-  --field-sand: #F2E4D8;
-  --field-dawn: #EADFEA;
-  --ink: #17140F;
-  --ink-soft: #5C564C;
-  --signal-clay: #B85C38;
-  --surface: #FFFCF8;
+  /* Color - Ansai Redesign System - Dark Theme */
+  --field-blush: #1E1A18;
+  --field-sand: #2A2420;
+  --field-dawn: #221D24;
+  --ink: #FFFCF8;
+  --ink-soft: #A8A095;
+  --signal-clay: #E87A4F;
+  --surface: #100F0D;
 
   --bg-primary: var(--field-blush);
   --bg-secondary: var(--field-sand);
@@ -24,13 +24,13 @@
   --text-tertiary: var(--ink-soft);
   --text-dim: var(--ink-soft);
   
-  --border: rgba(23, 20, 15, 0.08);
-  --border-strong: rgba(23, 20, 15, 0.16);
+  --border: rgba(255, 252, 248, 0.12);
+  --border-strong: rgba(255, 252, 248, 0.24);
 
   /* Sole accent */
   --blue: var(--signal-clay);
-  --blue-soft: rgba(184, 92, 56, 0.09);
-  --blue-glow: rgba(184, 92, 56, 0.35);
+  --blue-soft: rgba(232, 122, 79, 0.15);
+  --blue-glow: rgba(232, 122, 79, 0.35);
 
   /* Shape */
   --radius-btn: 8px;
