@@ -1,0 +1,56 @@
+import os
+import glob
+from docx import Document
+
+def process_text(text):
+    text = text.replace("digital infrastructure", "agentic infrastructure")
+    text = text.replace("Digital infrastructure", "Agentic infrastructure")
+    text = text.replace("Digital Infrastructure", "Agentic Infrastructure")
+    
+    # Specific pivot text
+    text = text.replace("Ansai is not becoming \"an AI agent company.\"", "Ansai is an AI agent company.")
+    text = text.replace("Ansai is not becoming 'an AI agent company.'", "Ansai is an AI agent company.")
+    
+    text = text.replace("operational infrastructure platform", "agentic infrastructure platform")
+    
+    return text
+
+for ext in ['**/*.md', '**/*.html']:
+    for path in glob.glob(ext, recursive=True):
+        if 'node_modules' in path or '.git' in path: continue
+        with open(path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        new_content = process_text(content)
+        
+        if content != new_content:
+            print(f"Updated {path}")
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+
+for path in glob.glob('**/*.docx', recursive=True):
+    if 'node_modules' in path or '.git' in path: continue
+    try:
+        doc = Document(path)
+        changed = False
+        for p in doc.paragraphs:
+            new_text = process_text(p.text)
+            if new_text != p.text:
+                p.text = new_text
+                changed = True
+                
+        for table in doc.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    for p in cell.paragraphs:
+                        new_text = process_text(p.text)
+                        if new_text != p.text:
+                            p.text = new_text
+                            changed = True
+                            
+        if changed:
+            print(f"Updated {path}")
+            doc.save(path)
+    except Exception as e:
+        print(f"Error processing {path}: {e}")
+

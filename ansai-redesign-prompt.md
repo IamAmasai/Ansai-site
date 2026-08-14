@@ -2,8 +2,8 @@ I have loaded tasteskill v2 (experimental) as my only source of design rules.
 
 Brief:
 - Site: Ansai Technologies marketing site (the live repo, vanilla HTML/CSS/JS)
-- Mode: overhaul on the visual layer, preserve on copy and IA. Do not touch URL structure, nav labels, or the locked terms "digital infrastructure" and "organizations"
-- Product: Ansai, the structural digital infrastructure layer for African organizations. First live product is EduManage, a multi-tenant school management platform
+- Mode: overhaul on the visual layer, preserve on copy and IA. Do not touch URL structure, nav labels, or the locked terms "agentic infrastructure" and "organizations"
+- Product: Ansai, the structural agentic agentic infrastructure layer for African organizations. First live product is EduManage, a multi-tenant school management platform
 - Audience: decision-makers at Kenyan and African organizations (schools, institutions, SMEs) evaluating trust-first B2B infrastructure, not a consumer or agency audience
 - Vibe words: confident, structural, restrained, trust-first B2B, not agency-playful, not consumer-flashy
 - References: none external, the brand mark itself is the primary reference, see logo section below
