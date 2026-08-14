@@ -1,6 +1,8 @@
-import os
 import glob
-from docx import Document
+try:
+    from docx import Document
+except ImportError as e:
+    raise SystemExit("Missing dependency: python-docx (pip install python-docx)") from e
 
 def process_text(text):
     text = text.replace("digital infrastructure", "agentic infrastructure")
