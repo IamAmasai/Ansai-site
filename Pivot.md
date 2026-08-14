@@ -20,7 +20,7 @@ This is the language discipline. Anything external-facing gets checked against t
 
 | Term | Locked to | Explicitly NOT this | Status |
 |---|---|---|---|
-| Category (external, public-facing) | **"agentic infrastructure"** | digital infrastructure, data structure company | **LOCKED (final)** |
+| Category (external, public-facing) | **"agentic infrastructure"** | digital infrastructure, operational infrastructure, data structure company | **LOCKED (final)** |
 | Who it serves | **organizations** | institutions | Locked |
 | What AI is | the core of our agentic infrastructure, central to our platform | a mere side feature | Locked |
 | Internal engineering codename | *(deliberately not yet decided)* | ~~Kiini~~ (rejected by founder) | Parked |
@@ -291,7 +291,7 @@ Ansai builds agentic infrastructure for African organizations — schools, busin
 
 ### 12.7 Pre-ship checklist — run this before anything goes live
 
-- [ ] Zero instances of "institution" or "agentic infrastructure" anywhere in shipped copy
+- [ ] Zero instances of "institution" or "digital infrastructure" anywhere in shipped copy
 - [ ] Zero emoji used as icons
 - [ ] Zero decorative charts without real, labeled data
 - [ ] Zero stock photography

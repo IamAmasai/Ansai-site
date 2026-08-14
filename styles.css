@@ -6,14 +6,14 @@
    ============================================================ */
 
 :root {
-  /* Color - Ansai Redesign System - Dark Theme */
-  --field-blush: #1E1A18;
-  --field-sand: #2A2420;
-  --field-dawn: #221D24;
-  --ink: #FFFCF8;
-  --ink-soft: #A8A095;
+  /* Color - Ansai Redesign System - Dark Theme (Softened) */
+  --field-blush: #2C2826;
+  --field-sand: #38312C;
+  --field-dawn: #312A32;
+  --ink: #F2EBE1;
+  --ink-soft: #B8B0A5;
   --signal-clay: #E87A4F;
-  --surface: #100F0D;
+  --surface: #201E1C;
 
   --bg-primary: var(--field-blush);
   --bg-secondary: var(--field-sand);
@@ -24,8 +24,8 @@
   --text-tertiary: var(--ink-soft);
   --text-dim: var(--ink-soft);
   
-  --border: rgba(255, 252, 248, 0.12);
-  --border-strong: rgba(255, 252, 248, 0.24);
+  --border: rgba(255, 252, 248, 0.15);
+  --border-strong: rgba(255, 252, 248, 0.28);
 
   /* Sole accent */
   --blue: var(--signal-clay);
