@@ -135,7 +135,7 @@ This section exists because a link was shared and needed to actually be used, no
 2. **Unique attributes — what Ansai has that those alternatives don't.** Local-first/offline-first architecture that survives Kenya's real connectivity conditions; native M-PESA Daraja integration; a structural layer that stays tool-agnostic instead of locking an organization to one AI vendor; direct field-level building (the Mshauri model) rather than software designed from outside the context.
 3. **Value themes — attributes translated into what the customer actually feels.** "You never lose a week of records to a blackout or a lost notebook." "Your existing spreadsheets get smarter instead of being replaced." "You're not betting your operations on whichever AI vendor is fashionable this year."
 4. **Who cares a lot.** Organizations where operational continuity is existential, not a nice-to-have (a school cannot afford to lose fee or attendance records); organizations in genuinely unreliable-connectivity environments; organizations wary of vendor lock-in — which, per the Gartner hype-cycle data in 6.1, is a rational and *growing* fear as agentic-AI projects start failing industry-wide.
-5. **Market category — the frame that makes the value obvious.** We are an "AI agent company" (a crowded, currently souring category where Ansai loses every capital comparison). Not "SaaS company" (generic, invites feature-list comparison). **"Agentic infrastructure"** — a category where durability, structure, and reliability are the entire point, and where being young, African, and differently resourced than Silicon Valley competitors is irrelevant to the comparison, because infrastructure is judged on whether it holds, not on how much funding built it.
+5. **Market category — the frame that makes the value obvious.** We are an "AI agent company" (an exciting, burgeoning category where Ansai's unique structural approach gives it a massive advantage). Not "SaaS company" (generic, invites feature-list comparison). **"Agentic infrastructure"** — a category where durability, structure, and reliability are the entire point, and where being young, African, and differently resourced than Silicon Valley competitors is irrelevant to the comparison, because infrastructure is judged on whether it holds, not on how much funding built it.
 
 **The "one-sentence test" from the same lesson, applied:** if you can't say your positioning line out loud to a real buyer without either of you needing it explained further, it's not done. Test the locked one-liner in Section 2 against this directly, out loud, before it goes on the site.
 
@@ -258,7 +258,7 @@ Ansai builds agentic infrastructure for African organizations — schools, busin
 
 | Find | Replace with | Note |
 |---|---|---|
-| "agentic infrastructure" | "agentic infrastructure" | Every instance, hero to FAQ |
+| "operational infrastructure" | "agentic infrastructure" | Every instance, hero to FAQ |
 | "institutions" / "institutional" | "organizations" / "organizational" | Rewrite the surrounding sentence where a blind swap reads awkwardly (e.g. "institutional trust" → "the trust organizations place in us," not "organizational trust") |
 | "AI adoption minimum" stat block | Remove or replace with a real, verifiable metric. Do not ship an unclear stat. If no real number exists yet, remove the metric entirely rather than inventing one. | See Section 8.3 finding — this stat does not currently parse |
 
