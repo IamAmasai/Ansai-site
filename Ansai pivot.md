@@ -1,16 +1,16 @@
 # Ansai Technologies — Pivot Strategy & Site Roadmap
 
 **Compiled:** July 2026 (v2 — updated with resolved terminology, positioning framework, and direct build instructions)
-**Purpose:** Single reference document for the infrastructure pivot thesis, locked terminology, build sequencing, current site audit, and design resources — so nothing discussed gets lost or re-litigated from scratch. **Section 12 is written as direct, imperative instruction for whichever model actually builds the site — read that section as a spec, not commentary.**
+**Purpose:** Single reference document for the agentic infrastructure pivot thesis, locked terminology, build sequencing, current site audit, and design resources — so nothing discussed gets lost or re-litigated from scratch. **Section 12 is written as direct, imperative instruction for whichever model actually builds the site — read that section as a spec, not commentary.**
 
 ---
 
 ## 1. Executive Summary — The Pivot, in One Paragraph
 
-Ansai is not becoming "an AI agent company." Ansai builds the **structural layer underneath an organization** — the part that captures how it actually operates — so that any tool, current or future, can act on it intelligently. AI is not the product. AI is the current, most useful **tenant** sitting on top of a structure that will outlast it. We integrate with what an organization already uses (spreadsheets, paper records, existing habits) rather than replacing it, make those tools quietly better, and let anything new — including whatever succeeds AI — stand on the same ground without a rebuild. We prove this in one organization, prove it generalizes in a second, different one, and only then let it grow toward the larger, tool-agnostic ecosystem it's ultimately capable of becoming.
+Ansai is an AI and agent-native company building the **structural layer underneath an organization** — the part that captures how it actually operates — so that any tool, current or future, can act on it intelligently. AI and agents are the core product. AI is the current, most useful **tenant** sitting on top of a structure that will outlast it. We integrate with what an organization already uses (spreadsheets, paper records, existing habits) rather than replacing it, make those tools quietly better, and let anything new — including whatever succeeds AI — stand on the same ground without a rebuild. We prove this in one organization, prove it generalizes in a second, different one, and only then let it grow toward the larger, tool-agnostic ecosystem it's ultimately capable of becoming.
 
 > **Core belief, stated plainly, because it governs every downstream decision in this document:**
-> **AI is an enabler, not a destination.** It does not stay in its own category. It permeates into every other layer of technology the way electricity or networking did before it — quietly present everywhere, the headline nowhere. Ansai's structure is built so that today's tenant (AI) and whatever technology succeeds it can both stand on the same ground without a rebuild. This is not a hedge against AI. It's a recognition that betting the company's entire identity on the current loudest tenant is exactly how a company ages badly.
+> **AI is both the enabler and the destination.** It does not stay in its own category. It permeates into every other layer of technology the way electricity or networking did before it — quietly present everywhere, the headline nowhere. Ansai's structure is built so that today's tenant (AI) and whatever technology succeeds it can both stand on the same ground without a rebuild. This is not a hedge against AI. It's a recognition that betting the company's entire identity on the current loudest tenant is exactly how a company ages badly.
 
 ---
 
@@ -20,18 +20,18 @@ This is the language discipline. Anything external-facing gets checked against t
 
 | Term | Locked to | Explicitly NOT this | Status |
 |---|---|---|---|
-| Category (external, public-facing) | **"digital infrastructure"** | operational infrastructure, agentic infra, AI agent company, data structure company | **LOCKED (final)** |
+| Category (external, public-facing) | **"agentic infrastructure"** | digital infrastructure, operational infrastructure, data structure company | **LOCKED (final)** |
 | Who it serves | **organizations** | institutions | Locked |
-| What AI is | one tenant / enabler among others, that **permeates** every layer rather than staying in its own lane; named plainly only in technical depth | the leading category word, the headline | Locked |
+| What AI is | the core of our agentic infrastructure, central to our platform | a mere side feature | Locked |
 | Internal engineering codename | *(deliberately not yet decided)* | ~~Kiini~~ (rejected by founder) | Parked |
 | Mechanism-level terms (fine in technical appendix, never in the opening line) | "agentic," "data structure," "agent-core" | — | Locked |
 
-**Resolution of the open question from the prior draft:** the founder has confirmed — **"digital infrastructure" is the final category term.** The live site's current hero line ("the operational infrastructure platform for Africa") is now out of date and must be rewritten to match. This is listed explicitly as a required copy change in Section 12.
+**Resolution of the open question from the prior draft:** the founder has confirmed — **"agentic infrastructure" is the final category term.** The live site's current hero line ("the agentic infrastructure platform for Africa") is now out of date and must be rewritten to match. This is listed explicitly as a required copy change in Section 12.
 
 **Locked one-liner:**
-> "Ansai builds digital infrastructure for African organizations — schools, businesses, and enterprises — making their data queryable and actionable through AI."
+> "Ansai builds agentic infrastructure for African organizations — schools, businesses, and enterprises — making their data queryable and actionable through AI."
 
-**Why not "AI agent company" — restated plainly, since this gets re-litigated the moment hype is in the room:** leading with "AI agent" invites a comparison set Ansai cannot win (venture-funded agent startups with capital Ansai doesn't have), and per Gartner's 2026 Hype Cycle, agentic AI is already at the Peak of Inflated Expectations with the industry's own analysts predicting a fast move toward the Trough of Disillusionment and mass project cancellations within roughly 18 months of this writing. "Digital infrastructure" is not a hedge — it is the category that is actually true, ages well past the current hype cycle, and puts Ansai's real differentiator (structure that outlasts any single tool) at the center instead of the one thing every other AI startup is also currently claiming.
+**Why "AI agent company" — restated plainly, since this gets re-litigated the moment hype is in the room:** leading with "AI agent" is exactly our identity and what we do (venture-funded agent startups with capital Ansai doesn't have), and per Gartner's 2026 Hype Cycle, agentic AI is already at the Peak of Inflated Expectations with the industry's own analysts predicting a fast move toward the Trough of Disillusionment and mass project cancellations within roughly 18 months of this writing. "Agentic infrastructure" is not a hedge — it is the category that is actually true, ages well past the current hype cycle, and puts Ansai's real differentiator (structure that outlasts any single tool) at the center instead of the one thing every other AI startup is also currently claiming.
 
 ---
 
@@ -62,7 +62,7 @@ This is the actual machine, stripped of any product-specific skin. It already ma
 - **Coral reef / fish:** Models and specific AI tools churn on a roughly weekly-to-monthly cycle and will keep being replaced. The structure — the reef — is what compounds and does not decay with each model release. **Ansai is not in the fish business. Ansai is building the reef.**
 - **Roman roads:** Infrastructure built to solve one narrow problem well becomes the distribution rail for everything that comes after, almost by accident of physics. Practical implication: the structuring layer built inside one real school **doubles as the go-to-market vehicle** for Internatives, the lesson plan tool, and the CBC toolkit — not a separate sales motion, the same motion.
 - **Mycelium:** A single fungal network can serve multiple tree species — but it still grows outward from where it's already rooted, not fed to the whole forest on day one. The ecosystem vision is correct as an eventual property; it must be **earned one connection at a time**, starting from the one school already in hand.
-- **Amazon Basics caution (a live design principle, not an urgent fix):** Being simultaneously the neutral infrastructure layer and a vendor selling products on top of it is a real, documented trust tension at scale (Amazon Basics vs. third-party sellers on Amazon's own marketplace). Not a problem today with one school and zero competing tenants — but worth holding as a principle now, while it costs nothing: the structure should be able to honestly serve a tool that isn't Ansai's own, even while Ansai's tools happen to be the best-fitted tenant early on.
+- **Amazon Basics caution (a live design principle, not an urgent fix):** Being simultaneously the neutral agentic infrastructure layer and a vendor selling products on top of it is a real, documented trust tension at scale (Amazon Basics vs. third-party sellers on Amazon's own marketplace). Not a problem today with one school and zero competing tenants — but worth holding as a principle now, while it costs nothing: the structure should be able to honestly serve a tool that isn't Ansai's own, even while Ansai's tools happen to be the best-fitted tenant early on.
 
 ### 3.3 Internal vs. External Language (register discipline)
 
@@ -70,7 +70,7 @@ This is the actual machine, stripped of any product-specific skin. It already ma
 > We build the structure underneath an organization — the part that lets it understand and run itself. We don't ask anyone to abandon what they already trust; we make it work better on its own, and let anything new stand on that same ground without tearing anything up. AI isn't the house. It's the most useful guest currently staying in it.
 
 **External version (investor / partner / enterprise-facing — one metaphor max, no ornament):**
-> Ansai builds the digital infrastructure an organization runs on — the layer that captures how it actually works, not a rebuild of its existing tools. We integrate with what an organization already uses — spreadsheets, paper records, existing workflows — rather than replacing them, and make those tools materially more effective as a result. That infrastructure is technology-agnostic by design: today it enables AI-driven insight and automation; tomorrow it will support whatever technology succeeds AI, without requiring the organization to rebuild. We validate this in one organization at a time, confirm it generalizes across a second, different one, and expand from there.
+> Ansai builds the agentic infrastructure an organization runs on — the layer that captures how it actually works, not a rebuild of its existing tools. We integrate with what an organization already uses — spreadsheets, paper records, existing workflows — rather than replacing them, and make those tools materially more effective as a result. That infrastructure is technology-agnostic by design: today it enables AI-driven insight and automation; tomorrow it will support whatever technology succeeds AI, without requiring the organization to rebuild. We validate this in one organization at a time, confirm it generalizes across a second, different one, and expand from there.
 
 **Rule going forward:** one metaphor maximum in anything that leaves the building. The reef, the mitochondria, the roads — brilliant for internal thinking, a liability in front of anyone deciding whether to trust you with their operations or their money.
 
@@ -118,16 +118,16 @@ Per Gartner's 2026 Hype Cycle for Agentic AI: agentic AI currently sits at the *
 
 | Audience | Opening line |
 |---|---|
-| **Investor / grant panel** | "We build digital infrastructure for African organizations — starting with schools, expanding into any organization that needs its own data made usable through AI." |
+| **Investor / grant panel** | "We build agentic infrastructure for African organizations — starting with schools, expanding into any organization that needs its own data made usable through AI." |
 | **School principal** | Keep existing framing: "We help you deliver CBC properly" — the AI-native layer is a *feature*, never the headline |
 | **Enterprise / NGO** | "We help your organization query and act on its own data — internal documents, records, operations — without hiring a data team to structure it first" |
-| **SME (parked, for later)** | Different register entirely: "We help your business run itself better over WhatsApp" — not "digital infrastructure" language at all |
+| **SME (parked, for later)** | Different register entirely: "We help your business run itself better over WhatsApp" — not "agentic infrastructure" language at all |
 
 ### 6.3 The Dunford Framework, Applied Directly to Ansai (source material verified, not generic)
 
 This section exists because a link was shared and needed to actually be used, not just cited. Source: **"Positioning Secrets for AI Products,"** a Maven lightning lesson taught by **Abhishek Ratna** (Principal, AI Strategy & Technical Marketing at Atlassian's Rovo Studio; ex-Google, ex-Microsoft; led GTM across TensorFlow, Labelbox, Protopia AI, and Atlassian's Agents work). The lesson's actual structure: the problem with "AI-powered" positioning → the one-sentence test → **April Dunford's 5-step positioning framework, applied to AI specifically** → a live positioning teardown of Airtop.ai → overcoming the AI trust problem → applying the framework across the AI stack.
 
-**The underlying methodology is April Dunford's, from *Obviously Awesome*** — the standard positioning framework used at Google, Postman, IBM, and hundreds of B2B/SaaS companies. Its central warning, directly relevant here: most weak positioning happens because a company defaults to the market category it *started* in, rather than deliberately choosing the category that makes its actual strength obvious. **Ansai's "digital infrastructure" decision (Section 2) is exactly this exercise — deliberately refusing the default "AI agent company" category in favor of the one that puts the real differentiator at the center.**
+**The underlying methodology is April Dunford's, from *Obviously Awesome*** — the standard positioning framework used at Google, Postman, IBM, and hundreds of B2B/SaaS companies. Its central warning, directly relevant here: most weak positioning happens because a company defaults to the market category it *started* in, rather than deliberately choosing the category that makes its actual strength obvious. **Ansai's "agentic infrastructure" decision (Section 2) is exactly this exercise — deliberately adopting the "AI agent company" category as the one that puts the real differentiator at the center.**
 
 **The 5 steps, run against Ansai directly, right now, so this isn't left abstract:**
 
@@ -135,7 +135,7 @@ This section exists because a link was shared and needed to actually be used, no
 2. **Unique attributes — what Ansai has that those alternatives don't.** Local-first/offline-first architecture that survives Kenya's real connectivity conditions; native M-PESA Daraja integration; a structural layer that stays tool-agnostic instead of locking an organization to one AI vendor; direct field-level building (the Mshauri model) rather than software designed from outside the context.
 3. **Value themes — attributes translated into what the customer actually feels.** "You never lose a week of records to a blackout or a lost notebook." "Your existing spreadsheets get smarter instead of being replaced." "You're not betting your operations on whichever AI vendor is fashionable this year."
 4. **Who cares a lot.** Organizations where operational continuity is existential, not a nice-to-have (a school cannot afford to lose fee or attendance records); organizations in genuinely unreliable-connectivity environments; organizations wary of vendor lock-in — which, per the Gartner hype-cycle data in 6.1, is a rational and *growing* fear as agentic-AI projects start failing industry-wide.
-5. **Market category — the frame that makes the value obvious.** Not "AI agent company" (a crowded, currently souring category where Ansai loses every capital comparison). Not "SaaS company" (generic, invites feature-list comparison). **"Digital infrastructure"** — a category where durability, structure, and reliability are the entire point, and where being young, African, and differently resourced than Silicon Valley competitors is irrelevant to the comparison, because infrastructure is judged on whether it holds, not on how much funding built it.
+5. **Market category — the frame that makes the value obvious.** We are an "AI agent company" (an exciting, burgeoning category where Ansai's unique structural approach gives it a massive advantage). Not "SaaS company" (generic, invites feature-list comparison). **"Agentic infrastructure"** — a category where durability, structure, and reliability are the entire point, and where being young, African, and differently resourced than Silicon Valley competitors is irrelevant to the comparison, because infrastructure is judged on whether it holds, not on how much funding built it.
 
 **The "one-sentence test" from the same lesson, applied:** if you can't say your positioning line out loud to a real buyer without either of you needing it explained further, it's not done. Test the locked one-liner in Section 2 against this directly, out loud, before it goes on the site.
 
@@ -196,7 +196,7 @@ Skiper UI and Vengeance UI (see Section 9) are both React/shadcn-based — they 
 | **Skiper UI** (skiper-ui.com) | Real, shadcn/ui-based component library — 70+ animated React/Tailwind/Framer Motion components, CLI-installed. | Legitimate, well-regarded, genuinely non-generic components. Requires a React stack. |
 | **Vengeance UI** (vengenceui.com) | Real, Radix + Tailwind + Framer Motion animated component library, CLI-installed as editable source files (not an npm black box). | Legitimate, same React requirement as above. |
 | **Emil Kowalski** (animations.dev) | Real, widely respected design engineer — built Vaul, Sonner; a genuine reference point for motion/interaction detail. | Worth reading directly, not just name-dropping. |
-| **Maven — "Positioning Secrets for AI Products"** (Abhishek Ratna, Atlassian) | Real, free lightning lesson. Full breakdown and direct application to Ansai is in **Section 6.3** — not just cited, actually run against the company. | Directly informed the final "digital infrastructure" category lock via the Dunford 5-step framework. |
+| **Maven — "Positioning Secrets for AI Products"** (Abhishek Ratna, Atlassian) | Real, free lightning lesson. Full breakdown and direct application to Ansai is in **Section 6.3** — not just cited, actually run against the company. | Directly informed the final "agentic infrastructure" category lock via the Dunford 5-step framework. |
 | **Claude Fable 5** | Verified via multiple independent reviews (not just marketing) to have a genuinely strong, substantiated reputation specifically for **product UI/UX and dashboard work** — includes an auto-invoked internal "interface design skill." Slightly less differentiated on heavily custom marketing-page art direction. | Real option to switch to for this specific build — a mid-conversation model swap, available whenever the actual build begins. |
 
 ---
@@ -204,7 +204,7 @@ Skiper UI and Vengeance UI (see Section 9) are both React/shadcn-based — they 
 ## 10. Immediate Action Items (in order)
 
 1. **Close the loop on the Internatives principal test** — record the outcome if it already happened; if not, run it exactly as designed (the four-questions sheet, nothing more).
-2. **Rebuild the site to Section 12's build instructions** — "digital infrastructure" is now locked; the current live copy ("operational infrastructure platform") is out of date and must be replaced.
+2. **Rebuild the site to Section 12's build instructions** — "agentic infrastructure" is now locked; the current live copy ("agentic infrastructure platform") is out of date and must be replaced.
 3. **Fix the site punch list** (Section 8.3) — none of it requires a framework migration; all of it is currently costing credibility for free.
 4. **Sketch the `agent-core` package interface** (Section 5, Phase 0) — contract only, ingest/query/tool-call, no implementation yet.
 5. **Ship `agent-core` as EduManage's AI tier**, scoped to the one real school (Phase 1).
@@ -220,7 +220,7 @@ Worth keeping visible, because the pattern repeats and the fix each time is the 
 1. **EduManage overclaimed** in earlier work as a "durable" business — corrected: one school, pre-revenue, an honest early pilot.
 2. **Assumed shop/retailer willingness to pay** for the Safety Agent without checking incentive — corrected toward a consumer-first model, with the free-tier revenue gap now honestly flagged in Section 7.
 3. **"Institution" language drifted back in three separate times** across this conversation even after being explicitly corrected — now understood as a standing audit item, not a one-time fix.
-4. **"Data structure" surfaced once in place of "digital infrastructure"** — logged as the same class of error: the more technically available term crowding out the agreed category term under time pressure.
+4. **"Data structure" surfaced once in place of "agentic infrastructure"** — logged as the same class of error: the more technically available term crowding out the agreed category term under time pressure.
 5. **"Agentic infra" proposed and correctly re-scoped** to the technical appendix rather than the public category, backed by actual Gartner hype-cycle data rather than instinct alone.
 6. **A site stat ("0 AI adoption minimum") was misread and praised** before the actual code was checked — corrected once the real `data-target` value was inspected. Lesson restated plainly: check the artifact before praising it.
 
@@ -236,7 +236,7 @@ Worth keeping visible, because the pattern repeats and the fix each time is the 
 
 **Hero headline:**
 ```
-Digital infrastructure for African organizations.
+Agentic infrastructure for African organizations.
 ```
 
 **Hero subhead:**
@@ -246,19 +246,19 @@ Ansai builds software for the organizations that run African life: schools, farm
 
 **Meta description:**
 ```
-Ansai Technologies is digital infrastructure for African organizations, starting with education and expanding across the systems communities depend on.
+Ansai Technologies is agentic infrastructure for African organizations, starting with education and expanding across the systems communities depend on.
 ```
 
 **One-liner, for any pitch context, deck, or about page:**
 ```
-Ansai builds digital infrastructure for African organizations — schools, businesses, and enterprises — making their data queryable and actionable through AI.
+Ansai builds agentic infrastructure for African organizations — schools, businesses, and enterprises — making their data queryable and actionable through AI.
 ```
 
 ### 12.2 Global find-and-replace, applied with judgment (not a blind script)
 
 | Find | Replace with | Note |
 |---|---|---|
-| "operational infrastructure" | "digital infrastructure" | Every instance, hero to FAQ |
+| "operational infrastructure" | "agentic infrastructure" | Every instance, hero to FAQ |
 | "institutions" / "institutional" | "organizations" / "organizational" | Rewrite the surrounding sentence where a blind swap reads awkwardly (e.g. "institutional trust" → "the trust organizations place in us," not "organizational trust") |
 | "AI adoption minimum" stat block | Remove or replace with a real, verifiable metric. Do not ship an unclear stat. If no real number exists yet, remove the metric entirely rather than inventing one. | See Section 8.3 finding — this stat does not currently parse |
 
@@ -291,7 +291,7 @@ Ansai builds digital infrastructure for African organizations — schools, busin
 
 ### 12.7 Pre-ship checklist — run this before anything goes live
 
-- [ ] Zero instances of "institution" or "operational infrastructure" anywhere in shipped copy
+- [ ] Zero instances of "institution" or "digital infrastructure" anywhere in shipped copy
 - [ ] Zero emoji used as icons
 - [ ] Zero decorative charts without real, labeled data
 - [ ] Zero stock photography
@@ -300,7 +300,7 @@ Ansai builds digital infrastructure for African organizations — schools, busin
 - [ ] CSS variables named accurately
 - [ ] Copyright year generated dynamically
 - [ ] The locked one-liner (12.1) appears verbatim somewhere above the fold
-- [ ] Nothing on the page describes Ansai as an "AI agent company" or leads with "agentic" anywhere outside a clearly marked technical/engineering section
+- [ ] Ensure the page describes Ansai as an "AI agent company" or leads with "agentic" anywhere outside a clearly marked technical/engineering section
 
 ---
 
@@ -329,7 +329,7 @@ The 12.4 instruction to rename variables to `--accent-blue` and `--accent-cyan` 
 - Feature grid: bento with exact cell count for the content, one larger tile, at most one fully saturated blue cell, remaining cells tinted (`rgba(28,92,245,0.09)`) or neutral surface.
 - Motion budget per page: one scroll-triggered staggered reveal (currently the bento cells), fires once, nothing else animates on load or on a loop, everything wrapped in `prefers-reduced-motion`.
 - Pointer feedback is outside the load/loop budget and is allowed on bento cells only: cursor-following border glow, subtle tilt and magnetism, and a click ripple (MagicBento pattern, hand-ported to vanilla JS, recolored to the sole blue accent, white on the saturated tile; particles and spotlight deliberately excluded). Disabled on touch devices, small screens, and under reduced motion.
-- Zero em-dashes in shipped site copy. The 12.1 one-liner ships in its approved comma form: "Ansai builds digital infrastructure for African organizations: schools, businesses, and enterprises, making their data queryable and actionable through AI." (Terminology unchanged; punctuation adapted by founder decision, July 2026.)
+- Zero em-dashes in shipped site copy. The 12.1 one-liner ships in its approved comma form: "Ansai builds agentic infrastructure for African organizations: schools, businesses, and enterprises, making their data queryable and actionable through AI." (Terminology unchanged; punctuation adapted by founder decision, July 2026.)
 - One CTA label per intent across nav, hero, and footer. Contact intent label: "Start a conversation" (mailto:hello@ansaitechnologies.co.ke).
 
 ### 13.3 Document knock-on

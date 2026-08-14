@@ -1,36 +1,37 @@
 /* ============================================================
    Ansai Technologies - site design system
-   Single-accent system per redesign spec: --blue is the only
+   Single-accent system per redesign spec: --accent is the only
    accent; teal lives in the logo mark only. Buttons 8px,
    cards 20px. Motion budget: one staggered bento reveal.
    ============================================================ */
 
 :root {
-  /* Color - Ansai Redesign System */
-  --field-blush: #F6E9E4;
-  --field-sand: #F2E4D8;
-  --field-dawn: #EADFEA;
-  --ink: #17140F;
-  --ink-soft: #5C564C;
-  --signal-clay: #B85C38;
-  --surface: #FFFCF8;
+  /* Color - Startup Modern Theme */
+  --field-white: #FFFFFF;
+  --field-gray: #F9FAFB;
+  --field-dawn: #F3F4F6;
+  --ink: #0F172A;
+  --ink-soft: #475569;
+  --signal-orange: #F97316;
+  --signal-blue: #2E91F2; /* Vibrant startup blue */
+  --surface: #FFFFFF;
 
-  --bg-primary: var(--field-blush);
-  --bg-secondary: var(--field-sand);
+  --bg-primary: var(--field-white);
+  --bg-secondary: var(--field-gray);
   --bg-tertiary: var(--field-dawn);
   
   --text-primary: var(--ink);
   --text-secondary: var(--ink-soft);
   --text-tertiary: var(--ink-soft);
-  --text-dim: var(--ink-soft);
+  --text-dim: #9CA3AF;
   
-  --border: rgba(23, 20, 15, 0.08);
-  --border-strong: rgba(23, 20, 15, 0.16);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.2);
 
   /* Sole accent */
-  --blue: var(--signal-clay);
-  --blue-soft: rgba(184, 92, 56, 0.09);
-  --blue-glow: rgba(184, 92, 56, 0.35);
+  --accent: var(--signal-orange);
+  --accent-soft: rgba(249, 115, 22, 0.15);
+  --accent-glow: rgba(249, 115, 22, 0.35);
 
   /* Shape */
   --radius-btn: 8px;
@@ -62,7 +63,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
-  background: linear-gradient(135deg, var(--field-blush), var(--field-sand), var(--field-dawn));
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
   background-attachment: fixed;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
@@ -85,11 +86,11 @@ svg {
 }
 
 ::selection {
-  background: var(--blue-glow);
+  background: var(--accent-glow);
 }
 
 :focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -125,7 +126,7 @@ h3 {
 }
 
 .display .ghost {
-  color: rgba(255, 255, 255, 0.34);
+  color: var(--text-dim);
 }
 
 .h1 {
@@ -277,14 +278,14 @@ h3 {
 }
 
 .button-primary {
-  background: var(--blue);
+  background: var(--accent);
   color: #ffffff;
   font-weight: 600;
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  box-shadow: 0 0 0 4px var(--blue-glow);
+  box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
 .button-ghost {
@@ -295,7 +296,7 @@ h3 {
 
 .button-ghost:hover,
 .button-ghost:focus-visible {
-  border-color: var(--blue);
+  border-color: var(--accent);
 }
 
 /* ---------- Hero: asymmetric split ---------- */
@@ -327,7 +328,7 @@ h3 {
   content: "";
   width: 32px;
   height: 1px;
-  background: var(--blue);
+  background: var(--accent);
 }
 
 .hero-copy .lead {
@@ -349,7 +350,7 @@ h3 {
   z-index: 1;
   min-width: 0;
   width: calc(100% + (100vw - min(1140px, 100vw - 48px)) / 2);
-  background: var(--blue);
+  background: var(--accent);
   border-radius: var(--radius-card) 0 0 var(--radius-card);
   padding: 48px 44px 36px;
   margin-bottom: -56px;
@@ -362,46 +363,46 @@ h3 {
 }
 
 .layer-diagram .slab {
-  fill: rgba(255, 255, 255, 0.13);
-  stroke: rgba(255, 255, 255, 0.3);
+  fill: rgba(15, 23, 42, 0.05);
+  stroke: rgba(15, 23, 42, 0.15);
   stroke-width: 1;
 }
 
 .layer-diagram .slab-highlight {
-  fill: #ffffff;
-  stroke: #ffffff;
+  fill: var(--ink);
+  stroke: var(--ink);
 }
 
 .layer-diagram .tenant {
-  fill: rgba(255, 255, 255, 0.16);
-  stroke: rgba(255, 255, 255, 0.35);
+  fill: rgba(15, 23, 42, 0.08);
+  stroke: rgba(15, 23, 42, 0.2);
   stroke-width: 1;
 }
 
 .layer-diagram .tenant-ghost {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.4);
+  stroke: rgba(15, 23, 42, 0.25);
   stroke-dasharray: 4 4;
 }
 
 .layer-diagram .rail {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.7);
+  stroke: rgba(15, 23, 42, 0.5);
   stroke-width: 1;
 }
 
 .layer-diagram text {
   font-family: var(--font-mono);
-  fill: rgba(255, 255, 255, 0.72);
+  fill: rgba(15, 23, 42, 0.7);
 }
 
 .layer-diagram .label-index {
-  fill: rgba(255, 255, 255, 0.5);
+  fill: rgba(15, 23, 42, 0.5);
   font-size: 10px;
 }
 
 .layer-diagram .label-name {
-  fill: #ffffff;
+  fill: var(--ink);
   font-size: 13px;
   font-weight: 500;
 }
@@ -420,7 +421,7 @@ h3 {
 }
 
 .layer-diagram .label-accent {
-  fill: var(--blue);
+  fill: var(--accent);
   font-size: 10px;
   letter-spacing: 0.14em;
 }
@@ -430,7 +431,7 @@ h3 {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.66);
+  color: var(--text-secondary);
 }
 
 /* ---------- Below-hero strip: one-liner, proof, sectors ---------- */
@@ -474,7 +475,7 @@ h3 {
   font-family: var(--font-mono);
   font-size: 28px;
   font-weight: 500;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .proof-item span {
@@ -591,14 +592,14 @@ h3 {
 
 .bento-featured {
   grid-row: span 2;
-  background: var(--blue);
+  background: var(--accent);
   border-color: transparent;
   padding: 40px 36px;
   --glow-rgb: 255, 255, 255;
 }
 
 .bento-tint {
-  background: var(--blue-soft);
+  background: var(--accent-soft);
 }
 
 .bento-neutral {
@@ -610,20 +611,20 @@ h3 {
 }
 
 .bento-featured .mono-label {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
 }
 
 .build-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 20px;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .bento-featured .build-icon {
   width: 48px;
   height: 48px;
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .build-icon svg {
@@ -652,7 +653,7 @@ h3 {
 }
 
 .bento-featured p {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-primary);
   font-size: 16px;
   max-width: 44ch;
 }
@@ -664,11 +665,11 @@ h3 {
   margin-top: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .bento-featured .cell-link {
-  color: #ffffff;
+  color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -699,13 +700,13 @@ h3 {
 }
 
 .eng-step.tint {
-  background: var(--blue-soft);
+  background: var(--accent-soft);
 }
 
 .eng-step .step-index {
   font-family: var(--font-mono);
   font-size: 13px;
-  color: var(--blue);
+  color: var(--accent);
   padding-top: 3px;
 }
 
@@ -758,7 +759,7 @@ h3 {
   width: 26px;
   height: 26px;
   fill: none;
-  stroke: #ffffff;
+  stroke: var(--ink);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -774,7 +775,7 @@ h3 {
 .eng-note {
   margin-top: 32px;
   padding: 20px 24px;
-  border-left: 2px solid var(--blue);
+  border-left: 2px solid var(--accent);
   background: var(--bg-secondary);
   border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
 }
@@ -801,7 +802,7 @@ h3 {
 }
 
 .principle.tint {
-  background: var(--blue-soft);
+  background: var(--accent-soft);
 }
 
 .principle .mono-label {
@@ -856,8 +857,8 @@ h3 {
 }
 
 .timeline-stage.is-active::before {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .timeline-stage .mono-label {
@@ -866,7 +867,7 @@ h3 {
 }
 
 .timeline-stage.is-active .mono-label {
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .timeline-stage h3 {
@@ -899,7 +900,7 @@ h3 {
 }
 
 .framework-card:hover {
-  border-color: var(--blue);
+  border-color: var(--accent);
 }
 
 .framework-card .mono-label {
@@ -922,7 +923,7 @@ h3 {
   margin-top: 20px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 /* ---------- FAQ ---------- */
@@ -966,7 +967,7 @@ h3 {
   content: "+";
   font-family: var(--font-mono);
   font-size: 18px;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .faq-list details[open] summary::after {
@@ -984,7 +985,7 @@ h3 {
 
 .cta-band {
   text-align: center;
-  background: radial-gradient(ellipse 58% 64% at 50% 110%, var(--blue-soft), transparent 68%);
+  background: radial-gradient(ellipse 58% 64% at 50% 110%, var(--accent-soft), transparent 68%);
 }
 
 .cta-band .section-heading {
@@ -1145,7 +1146,7 @@ h3 {
 .doc-body blockquote {
   margin: 24px 0;
   padding: 4px 0 4px 20px;
-  border-left: 2px solid var(--blue);
+  border-left: 2px solid var(--accent);
   color: var(--text-primary);
   font-size: 18px;
   font-weight: 300;
@@ -1169,7 +1170,7 @@ h3 {
   content: "–";
   position: absolute;
   left: 0;
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .doc-term {
@@ -1202,7 +1203,7 @@ h3 {
 }
 
 .doc-footer-nav a {
-  color: var(--blue);
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -1379,22 +1380,22 @@ h3 {
 .layer-diagram .on-white-note { fill: var(--ink-soft); }
 .layer-diagram .on-white { fill: var(--ink); }
 .layer-diagram .tenant rect, .layer-diagram .slab rect { fill: var(--surface); stroke: var(--border); }
-.layer-diagram .slab-highlight rect { stroke: var(--signal-clay); stroke-width: 2px; }
-.layer-diagram .rail { stroke: var(--signal-clay); }
+.layer-diagram .slab-highlight rect { stroke: var(--accent); stroke-width: 2px; }
+.layer-diagram .rail { stroke: var(--accent); }
 .layer-diagram .label-note { fill: var(--ink-soft); }
-.layer-diagram .label-accent { fill: var(--signal-clay); }
+.layer-diagram .label-accent { fill: var(--accent); }
 
 /* Buttons */
-.button-primary { background: var(--signal-clay) !important; color: white !important; }
+.button-primary { background: var(--accent) !important; color: white !important; }
 .button-ghost { border-color: var(--border-strong) !important; color: var(--ink) !important; }
 
 /* Cards / Bento */
 .bento-cell { background: var(--surface) !important; }
-.bento-tint { background: var(--field-sand) !important; }
-.bento-neutral { background: var(--field-dawn) !important; }
+.bento-tint { background: var(--bg-secondary) !important; }
+.bento-neutral { background: var(--bg-tertiary) !important; }
 
 /* Header */
-.site-header { background: rgba(246, 233, 228, 0.88) !important; /* var(--field-blush) with opacity */ }
+.site-header { background: rgba(255, 255, 255, 0.88) !important; /* var(--bg-primary) with opacity */ }
 
 /* Seam Component */
 .seam-cluster {
@@ -1425,8 +1426,8 @@ h3 {
   background: linear-gradient(
     105deg,
     transparent calc(68% - 2px),
-    var(--signal-clay) calc(68% - 2px),
-    var(--signal-clay) calc(68% + 2px),
+    var(--accent) calc(68% - 2px),
+    var(--accent) calc(68% + 2px),
     transparent calc(68% + 2px)
   );
   pointer-events: none;
