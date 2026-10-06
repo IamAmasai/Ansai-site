@@ -538,6 +538,17 @@ h3 {
   gap: 20px;
 }
 
+.bento-group {
+  grid-column: 1 / -1;
+  margin: 16px 0 -4px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.trust-engine-block {
+  margin-top: 28px;
+}
+
 .bento-cell {
   display: flex;
   flex-direction: column;
