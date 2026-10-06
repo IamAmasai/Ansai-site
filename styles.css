@@ -545,6 +545,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.bento-group + .bento-featured {
+  grid-row: auto;
+}
+
 .trust-engine-block {
   margin-top: 28px;
 }
