@@ -39,6 +39,7 @@
           <a href="#principles">Principles</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#frameworks">Frameworks</a>
+          <a href="docs.html">Docs</a>
         </nav>
 
         <a class="header-cta button button-ghost" href="#contact">Start a conversation</a>
@@ -139,6 +140,35 @@
                 <dd>What an agent can see and do is explicit, audited, and yours to change. Nothing acts without permission.</dd>
               </div>
             </dl>
+            <div class="trust-engine-block">
+              <h3>The Trust Engine</h3>
+              <p>
+                Trust, made checkable. Every identity verified, every record tamper-evident,
+                every payment verified against the network's own record, every action
+                auditable. Not claims — proofs. Every product we ship is a face of this
+                engine — and every check it runs produces an <em>attestation</em>: a signed,
+                checkable proof you can verify yourself.
+              </p>
+              <p>The four primitives it stands on:</p>
+              <dl class="architecture-dl">
+                <div>
+                  <dt><strong>Verified identity</strong></dt>
+                  <dd>People, businesses, and agents, proven once and checkable in milliseconds.</dd>
+                </div>
+                <div>
+                  <dt><strong>Tamper-evident records</strong></dt>
+                  <dd>What was written, when, by whom. Alter one entry and the chain shows it.</dd>
+                </div>
+                <div>
+                  <dt><strong>Payment verification</strong></dt>
+                  <dd>Every shilling matched to the M-Pesa event behind it. Screenshots prove nothing; the network proves everything.</dd>
+                </div>
+                <div>
+                  <dt><strong>Audit trails</strong></dt>
+                  <dd>The full story of what happened, ready for a dispute, a regulator, or a curious owner.</dd>
+                </div>
+              </dl>
+            </div>
             <p>
               Agents are the part everyone's building right now. We're building the part
               that has to exist first — and outlast whichever agent framework is fashionable this year.
@@ -208,6 +238,24 @@
         </div>
       </section>
 
+      <section class="section" id="why-now">
+        <div class="container ai-native-container">
+          <span class="mono-label">Why now</span>
+          <h2 class="h1">Agents are about to transact. <strong>Trust has to move into infrastructure.</strong></h2>
+          <p>
+            Software agents already negotiate, order, book, and pay — on behalf of people
+            and companies. The card networks answered with Know-Your-Agent. But nobody owns
+            identity and proof for the rails Africa actually runs on: M-Pesa, WhatsApp,
+            social commerce.
+          </p>
+          <p>
+            When software transacts with software and no human watches the handshake, trust
+            can no longer rest on recognition — it has to be verified, every time, by
+            infrastructure. That's what we build: the Trust Engine.
+          </p>
+        </div>
+      </section>
+
       <section class="section" id="ai-native">
         <div class="container ai-native-container">
           <span class="mono-label">Approach</span>
@@ -239,11 +287,49 @@
             <h2 class="h1"><strong>Infrastructure,</strong> not occasional-use software</h2>
             <p>
               Ansai builds systems organizations depend on every day. The standard is simple: if it
-              went offline for a week, would the organization feel it in daily operations?
+              went offline for a week, would the organization feel it in daily operations? One Trust
+              Engine, many faces: every product below is a face of it — and every proof it issues
+              is an attestation.
             </p>
           </div>
 
           <div class="bento">
+            <span class="mono-label bento-group">Commerce</span>
+
+            <article class="bento-cell">
+              <span class="mono-label">Product</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h3>Tuma</h3>
+              <p>
+                The trust layer for Kenyan social commerce. A buyer sends proof of payment on
+                WhatsApp — Tuma authenticates it against the real M-Pesa event before the
+                vendor delivers. No more screenshot fraud.
+              </p>
+            </article>
+
+            <article class="bento-cell">
+              <span class="mono-label">Product</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-3-.4-4.2-1L3 20l1.1-4.2A8.5 8.5 0 1 1 21 11.5Z" />
+                  <path d="M8.5 12h7M12 8.5v7" />
+                </svg>
+              </div>
+              <h3>Jibu</h3>
+              <p>
+                A WhatsApp commerce agent for sellers: takes orders, answers customers, and
+                confirms every payment against the network's own record — in plain English.
+                Settlement with proof, not promises.
+              </p>
+            </article>
+
+            <span class="mono-label bento-group">Institutions</span>
+
             <article class="bento-cell bento-featured">
               <span class="mono-label">Product</span>
               <div class="build-icon" aria-hidden="true">
@@ -253,12 +339,33 @@
               </div>
               <h3>EduManage</h3>
               <p>
-                Complete school operations: admissions, fees, academics, and communication, built
-                for the connectivity conditions schools actually face. Works offline, syncs when
-                connected, never loses data.
+                Complete school operations: admissions, fees, academics, and communication —
+                the flagship the engine was first proven on. Built for the connectivity
+                conditions schools actually face: works offline, syncs when connected, never
+                loses data.
               </p>
               <a class="cell-link" href="#roadmap">See the roadmap →</a>
             </article>
+
+            <span class="mono-label bento-group">Finance</span>
+
+            <article class="bento-cell">
+              <span class="mono-label">Product</span>
+              <div class="build-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="3" width="16" height="18" rx="2" />
+                  <path d="M8 7h8M8 11h8M8 15h5" />
+                </svg>
+              </div>
+              <h3>Hazina</h3>
+              <p>
+                Bookkeeping where the books prove themselves. Every transaction attested at
+                capture, eTIMS-ready from the moment of sale — so a KRA audit verifies your
+                records instead of interrogating them.
+              </p>
+            </article>
+
+            <span class="mono-label bento-group">Individuals</span>
 
             <article class="bento-cell bento-featured">
               <span class="mono-label">Product</span>
@@ -271,14 +378,13 @@
               </div>
               <h3>Personal Agents</h3>
               <p>
-                The same agentic infrastructure that makes an organization queryable, built for
-                one person: your own records, structured and made queryable, so an agent can act
-                on your behalf — tracking commitments, surfacing what needs attention, following
-                up for you. Same structure, grounding, and governance stack as every Ansai
-                product, applied to an individual instead of an organization.
+                The same infrastructure, applied to one person: your records structured and
+                queryable, so an agent can act on your behalf — with every action attested.
               </p>
               <a class="cell-link" href="#roadmap">See the roadmap →</a>
             </article>
+
+            <span class="mono-label bento-group">How we work</span>
 
             <article class="bento-cell bento-tint">
               <span class="mono-label">Method</span>
@@ -696,6 +802,26 @@
                 moves critical records to the server as soon as connectivity returns.
               </p>
             </details>
+            <details>
+              <summary>How does Ansai handle fraud and trust?</summary>
+              <p>
+                We don't detect fraud after the fact — we make the fraud structurally
+                pointless. Identities are verified once and attested. Payments are matched
+                to the M-Pesa event behind them, never to screenshots. Records are
+                tamper-evident, so disputes resolve against proof, not memory.
+              </p>
+            </details>
+            <details>
+              <summary>What is attestation infrastructure?</summary>
+              <p>
+                The engineering name for what we build: "Trust Engine" is the product
+                language; attestation infrastructure is what's underneath. Systems that
+                produce checkable evidence — of who someone is, of what was agreed, of what
+                was paid, of what happened. Every proof the engine issues is called an
+                <em>attestation</em> — the same word our API uses, so what marketing
+                promises and what developers integrate are one thing.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -765,6 +891,7 @@
         <span>© <span id="year"></span> Ansai Technologies</span>
         <div>
           <a href="#frameworks">Frameworks</a>
+          <a href="docs.html">Docs</a>
           <a href="#top">Back to top</a>
         </div>
       </div>
